@@ -1,6 +1,10 @@
 from discord.ext import commands
 import os
 import traceback
+import discord
+from discord.ext.commands import Bot
+from discord.ext import commands
+import asyncio
 
 bot = commands.Bot(command_prefix='')
 token = os.environ['DISCORD_BOT_TOKEN']
