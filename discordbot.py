@@ -20,4 +20,4 @@ async def on_message(message):
             # メッセージが送られてきたチャンネルへメッセージを送ります
             await message.channel.send(m)
 
-client.run("token")
+client.run("NzQwNTAyMjk5Njc5NTIyODQ3.Xyp8gg.xQgrZTEwEo-VGl-jaCVSr8aupcU")
