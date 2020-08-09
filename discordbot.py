@@ -11,7 +11,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 
 @bot.event
 async def on_ready():
-    activity = discord.Game(name="Netflix", type=3)
+    activity = discord.Game(name="アンジニティ", type=3)
     await bot.change_presence(status=discord.Status.idle, activity=activity)
     print("Bot is ready!")
     
