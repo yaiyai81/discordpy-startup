@@ -15,5 +15,5 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ねこ(ctx):
     await ctx.send('は？')
-
+    
 bot.run(token)
