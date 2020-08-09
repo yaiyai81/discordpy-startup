@@ -20,8 +20,5 @@ async def ねこ(ctx):
 async def おはよう(ctx):
     await ctx.send('寝てろ')
     
-@bot.command()
-async def おはよう(ctx):
-    await ctx.send('ねむい')
-    
+   
 bot.run(token)
