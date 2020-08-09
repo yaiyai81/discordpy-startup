@@ -7,7 +7,7 @@ token = ""
 
 @bot.event
 async def on_message(message):
-    print("処理の最後に次の式を追加します：")
+    print("")
     await bot.process_commands(message)
 
 @bot.command()
