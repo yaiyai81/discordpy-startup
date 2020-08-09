@@ -14,8 +14,11 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def ねこ(ctx):
-    await ctx.send('にゃー')
+async def ping(ctx):
+    await ctx.send('pong')
 
+@bot.command()
+async def neko(ctx):
+    await ctx.send('にゃー')
 
 bot.run(token)
