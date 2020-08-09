@@ -30,6 +30,8 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
-
+@bot.command()
+async def ねこ(ctx):
+    await ctx.send('は？')
        
 bot.run(token)
