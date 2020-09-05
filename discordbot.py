@@ -33,13 +33,7 @@ async def on_message(message):
     if "ななぎして" in message.content:
         word_list = ["ななぎして","な～ぎ","なぎさ太った？",":cat: :boom:"]
         await message.channel.send(random.choice(word_list))
-
-
-@bot.event
-async def on_message(message):
-    if message.author.bot:
-        return
-    
+   
     if bot.user in message.mentions:
          reply = f'{message.author.mention} うるさい。'
          await message.channel.send(reply)
