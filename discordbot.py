@@ -28,7 +28,7 @@ async def on_message(message):
         await message.channel.send(random.choice(word_list))
 
     if "ななぎして" in message.content:
-        word_list = ["ななぎして","な～ぎ","なぎさ太った？"]
+        word_list = ["ななぎして","な～ぎ","なぎさ太った？",":cat: :boom:"]
         await message.channel.send(random.choice(word_list))
 
         
