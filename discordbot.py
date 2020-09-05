@@ -34,13 +34,17 @@ async def on_message(message):
         word_list = ["ななぎして","な～ぎ","なぎさ太った？",":cat: :boom:"]
         await message.channel.send(random.choice(word_list))
 
-    if client.user in message.mentions: # 話しかけられたかの判定
-        await reply(message) # 返信する非同期関数を実行
-        
+       
 @bot.event
 # 返信する非同期関数を定義
 async def reply(message):
     reply = f'{message.author.mention} 呼んだ？' # 返信メッセージの作成
     await message.channel.send(reply) # 返信メッセージを送信
+
+# 発言時に実行されるイベントハンドラを定義
+@bot.event
+async def on_message(message):
+    if client.user in message.mentions: # 話しかけられたかの判定
+        await reply(message) # 返信する非同期関数を実行
 
 bot.run(token)
