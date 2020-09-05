@@ -21,7 +21,7 @@ async def おはよう(ctx):
   
 @bot.command()
 async def ななぎして(ctx):
-    await ctx.send('な～ぎ')
+    await ctx.send('な～ぎ','ななぎ')
 
  
     
