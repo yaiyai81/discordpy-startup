@@ -11,20 +11,6 @@ client = discord.Client()
 bot = commands.Bot(command_prefix='')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-@bot.event
-async def on_ready():
-    activity = discord.Game(name="アンジニティ", type=3)
-    await bot.change_presence(status=discord.Status.idle, activity=activity)
-    print("Bot is ready!")
-    
-@bot.command()
-async def おはよう(ctx):
-    await ctx.send('ねむいな')
-  
-@bot.command()
-async def ななぎして(ctx):
-    await ctx.send('な～ぎ')
-
 @client.event
 async def on_message(message):
 """以下メッセージを処理します"""
@@ -68,4 +54,4 @@ async def on_message(message):
 
         await message.channel.send(judge)
     
-bot.run(token)
+client.run(token)
