@@ -25,9 +25,6 @@ async def おはよう(ctx):
 async def ななぎして(ctx):
     await ctx.send('な～ぎ')
 
-    
-bot.run(token)
-
 @client.event
 async def on_message(message):
 """以下メッセージを処理します"""
@@ -70,3 +67,5 @@ async def on_message(message):
                     judge = lst
 
         await message.channel.send(judge)
+    
+bot.run(token)
