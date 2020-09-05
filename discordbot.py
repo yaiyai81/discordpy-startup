@@ -36,7 +36,9 @@ async def on_message(message):
         await message.channel.send(random.choice(word_list))
    
     if bot.user in message.mentions:
-         reply = f'{message.author.mention} うるさい。'
+         reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。
+```[とりあつかいせつめいしょ]
+おはよう、おやすみ、ななぎして```'
          await message.channel.send(reply)
         
 bot.run(token)
