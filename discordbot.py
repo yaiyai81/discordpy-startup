@@ -31,8 +31,6 @@ async def on_message(message):
         word_list = ["ななぎして","な～ぎ","なぎさ太った？",":cat: :boom:"]
         await message.channel.send(random.choice(word_list))
         
-@bot.event
-async def on_message(message):
     if "しのぶ" in message.content:
         embed = discord.Embed(title="タイトル", description="説明")
         
