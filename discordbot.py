@@ -18,14 +18,9 @@ async def on_ready():
     print("Bot is ready!")
     
 @bot.event
-async def on_message(message): #メッセージを受け取る関数なので必ず必要
-    if message.content == "おはよう": #:を忘れずつけよう！Enterを押すと自動で4文字分あけて改行されるよ！
-        await client.send_message(message.channel, "ねむい")
-
-    if message.content == "占い":
-#レスポンスされる運勢のリストを作成
-        unsei = ["大吉", "中吉", "吉", "末吉", "小吉", "凶", "大凶"]
-        choice = random.choice(unsei) #randomモジュール使用
-        await message.send_message(message.channel, choice)
+async def on_message(message):
+        if "おはよう" in message.content:
+        word_list = ["ねむい","なに？　寝てろよ","zzz…"]
+        await message.channel.send(random.choice(word_list))
             
 bot.run(token)
