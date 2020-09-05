@@ -22,10 +22,10 @@ async def on_ready():
         await message.channel.send("最初はぐー、じゃんけん")
 
         jkbot = random.choice(("ぐー", "ちょき", "ぱー"))
-        draw = "引き分けだよ～"
-        wn = "君の勝ち！"
-        lst = random.choice(("私の勝ち！弱ｗｗｗｗｗｗｗｗｗｗｗｗやめたら？じゃんけん",
-                              "私の勝ちだね(∩´∀｀)∩、また挑戦してね！"))
+        draw = "チッ、引き分けかよ"
+        wn = "は？　ふざけんなよ……僕が負けるわけない"
+        lst = random.choice(("弱ｗｗｗｗｗｗｗｗｗｗｗｗやめたら？じゃんけん",
+                              "僕の勝ち～～～～～！！！！ざこめ！"))
 
         def jankencheck(m):
             return (m.author == message.author) and (m.content in ['ぐー', 'ちょき', 'ぱー'])
