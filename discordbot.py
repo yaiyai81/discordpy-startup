@@ -6,6 +6,7 @@ import traceback
 import random
 import logging
 import asyncio
+import re
 
 client = discord.Client()
 bot = commands.Bot(command_prefix='')
