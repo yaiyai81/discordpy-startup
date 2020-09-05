@@ -22,7 +22,7 @@ async def on_message(message):
     if message.author.bot:
         return
     
-    if "おはよ" in message.content.startswith:
+    if "おはよう" in message.content:
         word_list = ["ねむい","なに？まだねてろよ","うるせー起こすな！","https://cdn.discordapp.com/attachments/740524923847573555/751840011577458770/gr120.png"]
         await message.channel.send(random.choice(word_list))
 
