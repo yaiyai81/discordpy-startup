@@ -21,10 +21,10 @@ async def on_ready():
 async def on_message(message):
     if client.user != message.author:
         if message.content.startswith("おはよう"):
-            word_list = ["ねむい","なに？　寝てろよ","zzz…"]
+            m = "おはようございます" + message.author.name + "さん！"
             await client.send_message(message.channel, m)
         if message.content.startswith("こんにちは"):
-           word_list = ["はらへ"]
+            m = "こんにちは" + message.author.name + "さん！"
             await client.send_message(message.channel, m)
             
 bot.run(token)
