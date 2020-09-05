@@ -19,11 +19,6 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-	if message.author.bot: #自身や他Botの発言に反応しないようにする。
-		return
-        
-@bot.event
-async def on_message(message):
         if "おはよう" in message.content:
         word_list = ["ねむい","なに？　寝てろよ","zzz..."]
         await message.channel.send(random.choice(word_list))
