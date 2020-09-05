@@ -19,11 +19,12 @@ async def on_ready():
     
 @bot.event
 async def on_message(message):
-    if "じゃんけん" in message.content:
-        word_list = ["グー","チョキ","パー"]
-    if "おはよう" in message.content:
-        word_list = ["ねむい","朝からなに？","いいから寝てろ","いいから寝てろ"ｚＺｚ…]
-        await message.channel.send(random.choice(word_list))
-
-    
+    if client.user != message.author:
+        if message.content.startswith("おはよう"):
+            word_list = ["ねむい","なに？　寝てろよ","zzz…"]
+            await client.send_message(message.channel, m)
+        if message.content.startswith("こんにちは"):
+           word_list = ["はらへ"]
+            await client.send_message(message.channel, m)
+            
 bot.run(token)
