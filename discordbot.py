@@ -6,6 +6,8 @@ from discord.ext.commands import Bot
 from discord.ext import commands
 import asyncio
 import random
+import logging
+logging.basicConfig(level=logging.ERROR)
 
 bot = commands.Bot(command_prefix='')
 token = os.environ['DISCORD_BOT_TOKEN']
