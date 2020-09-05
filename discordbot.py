@@ -54,4 +54,4 @@ async def on_message(message):
 
         await message.channel.send(judge)
     
-client.run(token)
+bot.run(token)
