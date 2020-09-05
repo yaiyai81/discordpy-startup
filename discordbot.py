@@ -36,12 +36,7 @@ async def on_message(message):
         await message.channel.send(random.choice(word_list))
    
     if bot.user in message.mentions:
-         reply = f'{message.author.mention} message.channel.send(
-  {embed: {
-    color: 16757683,
-    description: 'やっはろー'
-  }}
-);'
+         reply = f'{message.author.mention} うるさい。'
          await message.channel.send(reply)
-
+        
 bot.run(token)
