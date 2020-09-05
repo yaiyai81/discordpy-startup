@@ -17,15 +17,10 @@ async def on_ready():
     await bot.change_presence(status=discord.Status.idle, activity=activity)
     print("Bot is ready!")
 
+      
 @bot.event
 async def on_message(message):
-        if "おはよう" in message.content:
-        word_list = ["ねむい","なに？　寝てろよ","zzz…"]
-        await message.channel.send(random.choice(word_list))
-        
-@bot.event
-async def on_message(message):
-    if "!じゃんけん" in message.content:
+    if "じゃんけん" in message.content:
         word_list = ["グー","チョキ","パー"]
         await message.channel.send(random.choice(word_list))
     
