@@ -20,7 +20,7 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     if "おはよう" in message.content:
-        word_list = ["ねむい","なに？まだねてろよ","ぐぅ…"]
+        word_list = ["ねむい","なに？まだねてろよ",":sinobu:"]
         await message.channel.send(random.choice(word_list))
 
 @bot.event
