@@ -18,9 +18,9 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-"""以下メッセージを処理します"""
+
     global result, judge
-    if message.author.bot:  # ボットからのメッセージを回避します
+    if message.author.bot: 
         return
 
     if message.content == "じゃんけん":
