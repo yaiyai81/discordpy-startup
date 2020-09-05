@@ -17,49 +17,6 @@ async def on_ready():
     await bot.change_presence(status=discord.Status.idle, activity=activity)
     print("Bot is ready!")
     
-@client.event
-async def on_message(message):
-"""以下メッセージを処理します"""
-    global result, judge
-    if message.author.bot:  # ボットからのメッセージを回避します
-        return
-
-    if message.content == "じゃんけん":
-        await message.channel.send("はいはい。最初はぐー、じゃんけん")
-
-        jkbot = random.choice(("ぐー", "ちょき", "ぱー"))
-        draw = "引き分け。実質僕の勝ちだな"
-        wn = "は？　お前後出ししただろ"
-        lst = random.choice(("僕の勝ち！弱ｗｗｗｗｗｗｗｗｗｗｗｗやめたら？じゃんけん",
-                              "僕の勝ちだな。ざ～こ"))
-
-        def jankencheck(m):
-            return (m.author == message.author) and (m.content in ['ぐー', 'ちょき', 'ぱー'])
-
-        reply = await client.wait_for("message", check=jankencheck)
-        if reply.content == jkbot:
-            judge = draw
-        else:
-            if reply.content == "ぐー":
-                if jkbot == "ちょき":
-                    judge = wn
-                else:
-                    judge = lst
-
-            elif reply.content == "ちょき":
-                if jkbot == "ぱー":
-                    judge = wn
-                else:
-                    judge = lst
-
-            else:
-                if jkbot == "ぐー":
-                    judge = wn
-                else:
-                    judge = lst
-
-        await message.channel.send(judge)
-        
 @bot.command()
 async def おはよう(ctx):
     await ctx.send('ねむいな')
