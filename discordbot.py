@@ -28,5 +28,11 @@ async def on_message(message):
     if "おやすみ" in message.content:
         word_list = ["はよねな","さっさとねろ","ねみ…"]
         await message.channel.send(random.choice(word_list))
+        
+@bot.event
+async def on_message(message):
+    if "ななぎして" in message.content:
+        word_list = ["ななぎして","な～ぎ","なぎさ太った？"]
+        await message.channel.send(random.choice(word_list))
             
 bot.run(token)
