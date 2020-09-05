@@ -23,7 +23,7 @@ async def on_message(message):
         return
     
     if "おはよう" in message.content:
-        word_list = ["ねむい","なに？まだねてろよ","うるせー起こすな！","https://dl.dropboxusercontent.com/s/3qux2f89rgq1d22/gr120.png"]
+        word_list = ["ねむい","なに？まだねてろよ","うるせー起こすな！","https://cdn.discordapp.com/attachments/740524923847573555/751840011577458770/gr120.png"]
         await message.channel.send(random.choice(word_list))
 
     if "おやすみ" in message.content:
@@ -40,7 +40,7 @@ async def reply(message):
     await message.channel.send(reply) # 返信メッセージを送信
 
 # 発言時に実行されるイベントハンドラを定義
-@client.event
+@bot.event
 async def on_message(message):
     if client.user in message.mentions: # 話しかけられたかの判定
         await reply(message) # 返信する非同期関数を実行
