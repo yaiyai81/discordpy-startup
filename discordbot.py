@@ -42,7 +42,7 @@ async def reply(message):
 # 発言時に実行されるイベントハンドラを定義
 @bot.event
 async def on_message(message):
-    if client.user in message.mentions: # 話しかけられたかの判定
+    if bot.user in message.mentions: # 話しかけられたかの判定
         await reply(message) # 返信する非同期関数を実行
         
 bot.run(token)
