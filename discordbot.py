@@ -19,6 +19,9 @@ async def on_ready():
   
 @bot.event
 async def on_message(message):
+    if message.author.bot:
+		return
+    
     if "おはよう" in message.content:
         word_list = ["ねむい","なに？まだねてろよ","うるせー起こすな！","https://dl.dropboxusercontent.com/s/3qux2f89rgq1d22/gr120.png"]
         await message.channel.send(random.choice(word_list))
