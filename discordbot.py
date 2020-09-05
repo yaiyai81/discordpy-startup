@@ -22,4 +22,4 @@ async def on_message(message):
         await message.channel.send(random.choice(word_list))
 
     
-bot.run("TOKEN")
+bot.run(token)
