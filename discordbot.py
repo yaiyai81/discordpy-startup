@@ -41,9 +41,8 @@ async def on_message(message):
         await message.channel.send(reply)
 
 
-　  if "じゃんけん" in message.content:
-        word_list = ["お前、暇人だな。じゃあ、最初はぐー、じゃんけん……","はいはい。僕が勝ったら罰ゲームな！\n最初はぐー、じゃんけん……"]
-        await message.channel.send(random.choice(word_list))
+    if message.content == "じゃんけん":
+        await message.channel.send("お前、暇人だな。じゃあ、最初はぐー、じゃんけん……","はいはい。僕が勝ったら罰ゲームな！\n最初はぐー、じゃんけん……")
         
         jkbot = random.choice(("ぐー", "ちょき", "ぱー"))
         draw = "はいはい、引き分け"
