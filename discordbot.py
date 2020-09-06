@@ -20,6 +20,7 @@ async def on_ready():
   
 @bot.event
 async def on_message(message):
+    global result, judge
     if message.author.bot:
         return
     
