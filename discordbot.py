@@ -72,6 +72,8 @@ async def on_message(message):
                     judge = wn
                 else:
                     judge = lst
-
+                    
+ await message.channel.send(judge)
+        return
 
 bot.run(token)
