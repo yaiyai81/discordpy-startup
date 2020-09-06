@@ -102,3 +102,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+__pycache__/
+.env
+test.py
+test_db.py
