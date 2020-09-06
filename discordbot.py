@@ -46,7 +46,7 @@ async def on_message(message):
          reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[とりあつかいせつめいしょ]\nおはよう、おやすみ、ななぎして```'
          await message.channel.send(reply)
 
-    elif message.content == "じゃんけん":
+    if message.content == "じゃんけん":
          await message.channel.send("最初はグー、じゃんけん")
 
          shinajk = random.choice(("グー", "チョキ", "パー"))
