@@ -79,6 +79,6 @@ async def on_message(message):
                 else:
                     judge = lose
 
-    await message.channel.send("結果は%s" % judge)
+        await message.channel.send("結果は%s" % judge)
 
 bot.run(token)
