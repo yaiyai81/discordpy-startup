@@ -17,7 +17,13 @@ async def on_ready():
     activity = discord.Game(name="アンジニティ", type=3)
     await bot.change_presence(status=discord.Status.idle, activity=activity)
     print("Bot is ready!")
-  
+    
+    # コンソールにBOTとしてログインした名前とUSER-IDを出力
+    print('Logged in as')
+    print('BOT-NAME :', client.user.name)
+    print('BOT-ID   :', client.user.id)
+    print('------')  
+
 @bot.event
 async def on_message(message):
     global result, judge
