@@ -42,43 +42,40 @@ async def on_message(message):
 
 
     if message.content == "じゃんけん":
-        await message.channel.send("最初はグー、じゃんけん")
+        await message.channel.send("お前、暇人だな。じゃあ、最初はぐー、じゃんけん……")
 
-        shinajk = random.choice(("グー", "チョキ", "パー"))
-        draw = "引き分けだね(´・ω・`)"
-        win = "あなたの勝ちだよ！負けちゃったぁ..."
-        lose = "しいなの勝ち！やった！(≧▽≦)"
+        jkbot = random.choice(("ぐー", "ちょき", "ぱー"))
+        draw = "はいはい、引き分け"
+        wn = "お前の勝ち。満足した？"
+        lst = random.choice(("僕の勝ち！弱ｗｗｗｗｗｗｗｗｗｗｗｗやめたら？じゃんけん",
+                              "僕の勝ち～～～～！！！！"))
 
         def jankencheck(m):
-            return (m.author == message.author) and (m.content in ['グー', 'チョキ', 'パー'])
+            return (m.author == message.author) and (m.content in ['ぐー', 'ちょき', 'ぱー'])
 
         reply = await bot.wait_for("message", check=jankencheck)
-        if reply.content == shinajk:
+        if reply.content == jkbot:
             judge = draw
         else:
-            if reply.content == "グー":
-                if shinajk == "チョキ":
-                    judge = win
+            if reply.content == "ぐー":
+                if jkbot == "ちょき":
+                    judge = wn
                 else:
-                    judge = lose
+                    judge = lst
 
-            elif reply.content == "チョキ":
-                if shinajk == "パー":
-                    judge = win
+            elif reply.content == "ちょき":
+                if jkbot == "ぱー":
+                    judge = wn
                 else:
-                    judge = lose
+                    judge = lst
 
             else:
-                if shinajk == "グー":
-                    judge = win
+                if jkbot == "ぐー":
+                    judge = wn
                 else:
-                    judge = lose
+                    judge = lst
 
-        await message.channel.send("結果は%s" % judge)
-        await bot.process_commands(message)
-        
-@bot.command()
-async def example_cmd():
-    print("")
+        await message.channel.send(judge)
+ 
     
 bot.run(token)
