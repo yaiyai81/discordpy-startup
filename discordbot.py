@@ -29,12 +29,12 @@ async def on_message(message):
         await message.channel.send(random.choice(word_list))
 
     if "おやすみ" in message.content:
-        word_list = ["はよねな","さっさとねろ","ねみ…"]
-        await message.channel.send(random.choice(word_list))
+        word_list2 = ["はよねな","さっさとねろ","ねみ…"]
+        await message.channel.send(random.choice(word_list2))
 
     if "ななぎして" in message.content:
-        word_list = ["ななぎして","な～ぎ","なぎさ太った？",":cat: :boom:"]
-        await message.channel.send(random.choice(word_list))
+        word_list3 = ["ななぎして","な～ぎ","なぎさ太った？",":cat: :boom:"]
+        await message.channel.send(random.choice(word_list3))
    
     if bot.user in message.mentions:
         reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[とりあつかいせつめいしょ]\nおはよう、おやすみ、ななぎして```'
@@ -42,7 +42,7 @@ async def on_message(message):
 
 
     if message.content == "じゃんけん":
-        await message.channel.send("お前、暇人だな。じゃあ、最初はぐー、じゃんけん……","はいはい。僕が勝ったら罰ゲームな！\n最初はぐー、じゃんけん……")
+        await message.channel.send("お前、暇人だな。じゃあ、最初はぐー、じゃんけん……")
         
         jkbot = random.choice(("ぐー", "ちょき", "ぱー"))
         draw = "はいはい、引き分け"
