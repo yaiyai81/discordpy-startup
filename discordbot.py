@@ -46,7 +46,9 @@ async def on_message(message):
         reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[とりあつかいせつめいしょ]\nおはよう、おやすみ、ななぎして```'
         await message.channel.send(reply)
 
-    elif message.content == "じゃんけん":
+@bot.event
+async def on_message(message):
+    if message.content == "じゃんけん":
         await message.channel.send("最初はグー、じゃんけん")
 
         shinajk = random.choice(("グー", "チョキ", "パー"))
@@ -54,8 +56,8 @@ async def on_message(message):
         win = "あなたの勝ちだよ！負けちゃったぁ..."
         lose = "しいなの勝ち！やった！(≧▽≦)"
 
-    def jankencheck(m):
-        return (m.author == message.author) and (m.content in ['グー', 'チョキ', 'パー'])
+        def jankencheck(m):
+            return (m.author == message.author) and (m.content in ['グー', 'チョキ', 'パー'])
 
         reply = await client.wait_for("message", check=jankencheck)
         if reply.content == shinajk:
