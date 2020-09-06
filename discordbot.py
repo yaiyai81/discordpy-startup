@@ -55,7 +55,7 @@ async def on_message(message):
          lose = "しいなの勝ち！やった！(≧▽≦)"
 
          def jankencheck(m):
-            return m.content == "グー" or "チョキ" or "パー" and m.author == message.author
+    　　　　　return (m.author == message.author) and (m.content in ['グー', 'チョキ', 'パー'])
 
          reply = await client.wait_for("message", check=jankencheck)
          if reply.content == shinajk:
