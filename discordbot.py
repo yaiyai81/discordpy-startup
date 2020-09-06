@@ -75,5 +75,10 @@ async def on_message(message):
                     judge = lose
 
         await message.channel.send("結果は%s" % judge)
-
+        await bot.process_commands(message)
+        
+@bot.command()
+async def example_cmd():
+    print("")
+    
 bot.run(token)
