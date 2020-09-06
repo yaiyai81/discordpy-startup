@@ -25,15 +25,15 @@ async def on_message(message):
         return
     
     if "おはよう" in message.content:
-        word_list = ["ねむい","なに？まだねてろよ","うるせー起こすな！","https://cdn.discordapp.com/attachments/740524923847573555/751840011577458770/gr120.png"]
+        word_list = ["ん～……？　ねむい……","なに……？まだねてろよ……","うるせーな、起こすな！","https://cdn.discordapp.com/attachments/740524923847573555/751840011577458770/gr120.png","ぐぅ……あと1時間……"]
         await message.channel.send(random.choice(word_list))
 
     if "おやすみ" in message.content:
-        word_list2 = ["はよねな","さっさとねろ","ねみ…"]
+        word_list2 = ["なんだよ、はよねろ","あーはいはい。さっさとねろよ……","……僕はまだ寝ないけど？","はいはい、おやすみ……"]
         await message.channel.send(random.choice(word_list2))
 
     if "ななぎして" in message.content:
-        word_list3 = ["ななぎして","な～ぎ","なぎさ太った？",":cat: :boom:"]
+        word_list3 = ["ななぎして","な～ぎ……って僕はやんねーから……","最近、なぎさ太ったんじゃね？",":cat: :boom:"]
         await message.channel.send(random.choice(word_list3))
    
     if bot.user in message.mentions:
@@ -42,7 +42,7 @@ async def on_message(message):
 
 
     if message.content == "じゃんけん":
-        await message.channel.send("お前、暇人だな。\nじゃあ、最初はぐー、じゃんけん……")
+        await message.channel.send("へーへー。最初はぐー、じゃんけん……")
         
         jkbot = random.choice(("ぐー", "ちょき", "ぱー"))
         draw = random.choice(("あいこじゃん。つまんねーな",
