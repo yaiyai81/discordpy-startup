@@ -39,40 +39,39 @@ async def on_message(message):
          reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[とりあつかいせつめいしょ]\nおはよう、おやすみ、ななぎして```'
          await message.channel.send(reply)
 
-
     if message.content == "じゃんけん":
-        await message.channel.send("最初はぐー、じゃんけん……")
+        await message.channel.send("最初はグー、じゃんけん")
 
-        jkbot = random.choice(("ぐー", "ちょき", "ぱー"))
-        draw = "引き分けだ。"
-        wn = "君の勝ち！"
-        lst = "僕の勝ち！"
+        shinajk = random.choice(("グー", "チョキ", "パー"))
+        draw = "は？引き分けかよ"
+        win = "負けた"
+        lose = "僕の勝ちじゃん！当然だな"
 
         def jankencheck(m):
-            return (m.author == message.author) and (m.content in ['ぐー', 'ちょき', 'ぱー'])
+            return (m.author == message.author) and (m.content in ['グー', 'チョキ', 'パー'])
 
         reply = await client.wait_for("message", check=jankencheck)
-        if reply.content == jkbot:
+        if reply.content == shinajk:
             judge = draw
         else:
-            if reply.content == "ぐー":
-                if jkbot == "ちょき":
-                    judge = wn
+            if reply.content == "グー":
+                if shinajk == "チョキ":
+                    judge = win
                 else:
-                    judge = lst
+                    judge = lose
 
-            elif reply.content == "ちょき":
-                if jkbot == "ぱー":
-                    judge = wn
+            elif reply.content == "チョキ":
+                if shinajk == "パー":
+                    judge = win
                 else:
-                    judge = lst
+                    judge = lose
 
             else:
-                if jkbot == "ぐー":
-                    judge = wn
+                if shinajk == "グー":
+                    judge = win
                 else:
-                    judge = lst 
-                    
-        await message.channel.send(judge)
+                    judge = lose
+
+        await message.channel.send("結果は%s" % judge)
 
 bot.run(token)
