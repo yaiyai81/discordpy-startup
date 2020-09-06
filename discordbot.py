@@ -71,8 +71,8 @@ async def on_message(message):
                 if jkbot == "ぐー":
                     judge = wn
                 else:
-                    judge = lst
+                    judge = lst 
                     
-
+        await message.channel.send(judge)
 
 bot.run(token)
