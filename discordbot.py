@@ -46,8 +46,7 @@ async def on_message(message):
         reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[とりあつかいせつめいしょ]\nおはよう、おやすみ、ななぎして```'
         await message.channel.send(reply)
 
-@bot.event
-async def on_message(message):
+
     if message.content == "じゃんけん":
         await message.channel.send("最初はグー、じゃんけん")
 
