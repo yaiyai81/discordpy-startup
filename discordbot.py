@@ -38,5 +38,40 @@ async def on_message(message):
     if bot.user in message.mentions:
          reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[とりあつかいせつめいしょ]\nおはよう、おやすみ、ななぎして```'
          await message.channel.send(reply)
-        
+
+
+    if message.content == "ct!zyanken":
+        await message.channel.send("最初はぐー、じゃんけん、、、")
+
+        jkbot = random.choice(("ぐー", "ちょき", "ぱー"))
+        draw = "引き分けだ。"
+        wn = "君の勝ち！"
+        lst = "僕の勝ち！"
+
+        def jankencheck(m):
+            return (m.author == message.author) and (m.content in ['ぐー', 'ちょき', 'ぱー'])
+
+        reply = await client.wait_for("message", check=jankencheck)
+        if reply.content == jkbot:
+            judge = draw
+        else:
+            if reply.content == "ぐー":
+                if jkbot == "ちょき":
+                    judge = wn
+                else:
+                    judge = lst
+
+            elif reply.content == "ちょき":
+                if jkbot == "ぱー":
+                    judge = wn
+                else:
+                    judge = lst
+
+            else:
+                if jkbot == "ぐー":
+                    judge = wn
+                else:
+                    judge = lst
+
+
 bot.run(token)
