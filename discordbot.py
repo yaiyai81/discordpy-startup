@@ -40,7 +40,7 @@ async def on_message(message):
          await message.channel.send(reply)
 
 
-    if message.content == "じゃんけん:
+    if message.content == "じゃんけん":
         await message.channel.send("最初はぐー、じゃんけん……")
 
         jkbot = random.choice(("ぐー", "ちょき", "ぱー"))
