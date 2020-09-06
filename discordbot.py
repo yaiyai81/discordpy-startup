@@ -52,7 +52,7 @@ async def on_message(message):
         def jankencheck(m):
             return (m.author == message.author) and (m.content in ['グー', 'チョキ', 'パー'])
 
-        reply = await client.wait_for("message", check=jankencheck)
+        reply = await bot.wait_for("message", check=jankencheck)
         if reply.content == shinajk:
             judge = draw
         else:
