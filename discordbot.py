@@ -37,7 +37,7 @@ async def on_message(message):
         await message.channel.send(random.choice(word_list3))
    
     if bot.user in message.mentions:
-        reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[とりあつかいせつめいしょ]\nおはよう、おやすみ、ななぎして```'
+        reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[とりあつかいせつめいしょ]\nおはよう、おやすみ、ななぎして\nじゃんけん→Shinobuの返事→ぐー、ちょき、ぱー```'
         await message.channel.send(reply)
 
 
@@ -48,9 +48,9 @@ async def on_message(message):
         draw = random.choice(("あいこじゃん。つまんねーな",
                               "はいはい、引き分け","あいこ～。もう終わり？"))
         wn = random.choice(("チッ、お前の勝ちだよ……",
-                              "くそ、負けた……次は勝つからな！"))
+                              "くそ、負けた……次は勝つからな！","負けた……はぁ？　ふざけんなよ……","負けたし……お前……後出ししただろ！"))
         lst = random.choice(("僕の勝ち！お前弱いな～～！！！",
-                              "僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ","お前の負け。僕って強いだろ？"))
+                              "僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ","お前の負け。僕って強いだろ？","お前の負け！　雑魚だな～！"))
 
         def jankencheck(m):
             return (m.author == message.author) and (m.content in ['ぐー', 'ちょき', 'ぱー'])
