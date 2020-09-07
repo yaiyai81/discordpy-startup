@@ -34,23 +34,23 @@ async def on_message(message):
         await message.channel.send(random.choice(word_list2))
 
     if "ななぎして" in message.content:
-        word_list3 = ["ななぎして","な～ぎ……って僕はやんねーから……","最近、なぎさ太ったんじゃね？",":cat: :boom:"]
+        word_list3 = ["ななぎして","な～ぎ……って僕はやんねーから……","最近、なぎさ太ったんじゃね？",":cat: :boom:","おいなぎ！お手！","それって一生そろわないんじゃね？","なななな～ぎな"]
         await message.channel.send(random.choice(word_list3))
    
     if bot.user in message.mentions:
-        reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[Hello Sinobu bot!]\n[挨拶]おはよう、おやすみ\n[Nagiにちょっかい]ななぎして\n[ミニゲーム]ネコチャンバトル→火風水の三種のねこを使って勝負。じゃんけん形式。```'
+        reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[Hello Sinobu bot!]\n挨拶：おはよう、おやすみ\n会話：ななぎして\nゲーム：ネコチャンバトル→火風水の三種のねこを使って勝負。じゃんけん形式。```'
         await message.channel.send(reply)
         
 
     if message.content == "ネコチャンバトル":
         await message.channel.send("へえ。僕にバトルを挑むとは良い度胸だな！\n僕はもう召喚するねこを決めてる……いくぜ、ドローだ！")
-        embed=discord.Embed(title="▼火のねこ", description="燃え盛る火のネコチャン。風に強く、水に弱い\n:fire::fire::fire::cat::fire::fire::fire:", color=0xff0000)
+        embed=discord.Embed(title=":fire:火のねこ", description="燃え盛る火のネコチャン。風に強く、水に弱い\n:fire::fire::fire::cat::fire::fire::fire:", color=0xff0000)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png")
         await message.channel.send(embed=embed)
-        embed=discord.Embed(title="▼風のねこ", description="吹きすさぶ風のネコチャン。水に強く、火に弱い\n:cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado:", color=0x00ff11)
+        embed=discord.Embed(title=":cloud_tornado:風のねこ", description="吹きすさぶ風のネコチャン。水に強く、火に弱い\n:cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado:", color=0x00ff11)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png")
         await message.channel.send(embed=embed)       
-        embed=discord.Embed(title="▼水のねこ", description="流るる水のネコチャン。火に強く、風に弱い\n:droplet::droplet::droplet::cat::droplet::droplet::droplet:", color=0x72a8ee)
+        embed=discord.Embed(title=":droplet:水のねこ", description="流るる水のネコチャン。火に強く、風に弱い\n:droplet::droplet::droplet::cat::droplet::droplet::droplet:", color=0x72a8ee)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png")
         await message.channel.send(embed=embed)        
         
