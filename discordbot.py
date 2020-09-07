@@ -65,7 +65,12 @@ async def on_message(message):
         await message.channel.send(embed=embed)        
         
         jkbot = random.choice(("火のねこ", "風のねこ", "水のねこ"))
-        draw = random.choice((":fire::fire::fire::cat::fire::fire::fire:\n引き分けか。つまんねーな……",":fire::fire::fire::cat::fire::fire::fire:\n引き分け？　なかなかやるじゃん。でも僕が勝つまでやるべきだろ。",":fire::fire::fire::cat::fire::fire::fire:\nはいはい、引き分け",":fire::fire::fire::cat::fire::fire::fire:\nあいこ～。もう終わり？もうひと勝負くらいできるだろ？"))
+        draw = random.choice(("```message.author.nameの選んだのは火のネコチャンだ！\n対するShinobuは……なんと！これは両者火のネコチャンだ！```\n
+        :fire::fire::fire::cat::fire::fire::fire:\n引き分けか。つまんねーな……","```message.author.nameの選んだのは火のネコチャンだ！\n
+        対するShinobuは……なんと！これは両者火のネコチャンだ！```\n:fire::fire::fire::cat::fire::fire::fire:\n
+        引き分け？　なかなかやるじゃん。でも僕が勝つまでやるべきだろ。","```message.author.nameの選んだのは火のネコチャンだ！\n対するShinobuは……なんと！これは両者火のネコチャンだ！```\n
+        :fire::fire::fire::cat::fire::fire::fire:\nはいはい、引き分けね……また勝負しろよな！","```message.author.nameの選んだのは火のネコチャンだ！\n対するShinobuは……なんと！これは両者火のネコチャンだ！```\n
+        :fire::fire::fire::cat::fire::fire::fire:\nあいこ～。もう終わり？もうひと勝負くらいできるだろ？"))
         draw2 = random.choice((":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado:\nあいこじゃん。つまんねーな！もう一回やろうぜ",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado:\nお前、やる気あんのか？",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado:\nはいはい、引き分け",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado:\nあいこ～。もう終わり？"))
         draw3 = random.choice((":droplet::droplet::droplet::cat::droplet::droplet::droplet:\n引き分けじゃん。つまんねーな",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\nは？これはもう一回だろ。",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\nもう僕の勝ちでいいんじゃね？",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\nはいはい、引き分け",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\nあいこ～。もう終わり？"))
         wn = random.choice((":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado\nは？　ふざけんなもう一回勝負しろ！",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado:\nお前、ずるしただろ！！！！",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado:\nチッ、お前の勝ちだよ……僕のねこが負けるなんてな",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado:\nくそ、負けた……僕のねこが……次は勝つからな！",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado:\n負けた……僕のねこが……はぁ？　ふざけんなよ……",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado:\n負けたし……お前……イカサマしただろ！"))
