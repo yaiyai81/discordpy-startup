@@ -51,17 +51,17 @@ async def on_message(message):
                               ":v:\nはいはい、引き分け",":v:\nあいこ～。もう終わり？"))
         draw3 = random.choice((":hand_splayed:\nあいこじゃん。つまんねーな",
                               ":hand_splayed:\nはいはい、引き分け",":hand_splayed:\nあいこ～。もう終わり？"))
-        wn = random.choice((":v:\nチッ、お前の勝ちだよ……",
+        wn = random.choice((":v:\nは？　ふざけんなもう一回勝負しろ！",":v:\nお前、ずるしただろ！！！！",":v:\nチッ、お前の勝ちだよ……",
                               ":v:\nくそ、負けた……次は勝つからな！",":v:\n負けた……はぁ？　ふざけんなよ……",":v:\n負けたし……お前……後出ししただろ！"))
         wn2 = random.choice((":hand_splayed:\nチッ、お前の勝ちだよ……",
                               ":hand_splayed:\nくそ、負けた……次は勝つからな！",":hand_splayed:\n負けた……はぁ？　ふざけんなよ……",":hand_splayed:\n負けたし……お前……後出ししただろ！"))
-        wn3 = random.choice((":punch:\nチッ、お前の勝ちだよ……",
+        wn3 = random.choice((":punch:\n僕のぐーが負けるわけないだろ。もう一回勝負しろ",":punch:\nは？ぐーが負けるワケないだろ！これで殴れば人は死ぬ",":punch:\nお前をこの拳でなぐっていいか？",":punch:\nチッ、お前の勝ちだよ……",
                               ":punch:\nくそ、負けた……次は勝つからな！",":punch:\n負けた……はぁ？　ふざけんなよ……",":punch:\n負けたし……お前……後出ししただろ！"))
-        lst = random.choice((":v:\n僕の勝ち！お前弱いな～～！！！",
+        lst = random.choice((":v:\n僕の勝ち！お前弱いな～～！！！",":v:\nうわ、僕って、強すぎ……？",":v:\n僕の勝ちだ。いや、後出しじゃねーから！",
                               ":v:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":v:\nお前の負け。僕って強いだろ？",":v:\nお前の負け！　雑魚だな～！"))
-        lst2 = random.choice((":hand_splayed:\n僕の勝ち！お前弱いな～～！！！",
+        lst2 = random.choice((":hand_splayed:\n僕の勝ち！お前弱いな～～！！！",":hand_splayed:\nふん、僕が勝つってことは最初から決まってたんだよ！",":hand_splayed:\nお前の頭がパー！！！！！！僕の勝利！",
                               ":hand_splayed:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":hand_splayed:\nお前の負け。僕って強いだろ？",":hand_splayed:\nお前の負け！　雑魚だな～！"))
-        lst3 = random.choice((":punch:\n僕の勝ち！お前弱いな～～！！！",
+        lst3 = random.choice((":punch:\n僕の勝ち！お前弱いな～～！！！",":punch:\nはいはい、僕の勝ち。罰ゲームにこれで一発殴っていい？",":punch:\nなんで負けたかって？考えなくてもわかるだろ？僕が強いからだよ！",
                               ":punch:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":punch:\nお前の負け。僕って強いだろ？",":punch:\nお前の負け！　雑魚だな～！"))
         
 
