@@ -41,8 +41,8 @@ async def on_message(message):
         reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[せつめいしょ]\nおはよう、おやすみ、ななぎして\nネコチャンバトル→火風水の三種のねこを使って勝負。```'
         await message.channel.send(reply)
         
-    if message.content.startswith("ありがとう"):
-        filepath = '/hinoneko.png'
+    if message.content.startswith("あ"):
+        filepath = 'shinobu_bot/hinoneko.png'
         await bot.send_file(message.channel,filepath, content='火のねこ')
         
     if message.content == "ネコチャンバトル":
