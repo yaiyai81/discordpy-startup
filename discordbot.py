@@ -53,14 +53,14 @@ async def on_message(message):
                               ":hand_splayed:\nはいはい、引き分け",":hand_splayed:\nあいこ～。もう終わり？"))
         wn = random.choice((":v:\nチッ、お前の勝ちだよ……",
                               ":v:\nくそ、負けた……次は勝つからな！",":v:\n負けた……はぁ？　ふざけんなよ……",":v:\n負けたし……お前……後出ししただろ！"))
-        lst = random.choice((":v:\n僕の勝ち！お前弱いな～～！！！",
-                              ":v:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":v:\nお前の負け。僕って強いだろ？",":v:\nお前の負け！　雑魚だな～！"))
         wn2 = random.choice((":hand_splayed:\nチッ、お前の勝ちだよ……",
                               ":hand_splayed:\nくそ、負けた……次は勝つからな！",":hand_splayed:\n負けた……はぁ？　ふざけんなよ……",":hand_splayed:\n負けたし……お前……後出ししただろ！"))
-        lst2 = random.choice((":hand_splayed:\n僕の勝ち！お前弱いな～～！！！",
-                              ":hand_splayed:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ","hand_splayed:\nお前の負け。僕って強いだろ？",":hand_splayed:\nお前の負け！　雑魚だな～！"))
         wn3 = random.choice((":punch:\nチッ、お前の勝ちだよ……",
                               ":punch:\nくそ、負けた……次は勝つからな！",":punch:\n負けた……はぁ？　ふざけんなよ……",":punch:\n負けたし……お前……後出ししただろ！"))
+        lst = random.choice((":v:\n僕の勝ち！お前弱いな～～！！！",
+                              ":v:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":v:\nお前の負け。僕って強いだろ？",":v:\nお前の負け！　雑魚だな～！"))
+        lst2 = random.choice((":hand_splayed:\n僕の勝ち！お前弱いな～～！！！",
+                              ":hand_splayed:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ","hand_splayed:\nお前の負け。僕って強いだろ？",":hand_splayed:\nお前の負け！　雑魚だな～！"))
         lst3 = random.choice((":punch:\n僕の勝ち！お前弱いな～～！！！",
                               ":punch:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":punch:\nお前の負け。僕って強いだろ？",":punch:\nお前の負け！　雑魚だな～！"))
         
@@ -75,7 +75,7 @@ async def on_message(message):
             elif jkbot == "ぐー":
                 judge = draw
             else:
-                judge = lst
+                judge = lst2
 
         elif reply.content == "ちょき":
             if jkbot == "ぱー":
@@ -83,7 +83,7 @@ async def on_message(message):
             elif jkbot == "ちょき":
                 judge = draw2
             else:
-                judge = lst2
+                judge = lst3
 
         else:
             if jkbot == "ぐー":
@@ -91,7 +91,7 @@ async def on_message(message):
             elif jkbot == "ぱー":
                 judge = draw3
             else:
-                judge = lst3
+                judge = lst
 
         await message.channel.send(judge)
  
