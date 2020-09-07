@@ -44,11 +44,8 @@ async def on_message(message):
         await message.channel.send("へえ。僕に勝負を挑むとは良い度胸だな……お前はどのねこにする？\n```[ネコチャンバトルのルール]\n火のねこ→風のねこに強く、水のねこに弱い\n風のねこ→水のねこに弱く、火のねこに強い\n水のねこ→火の猫に強く、風のねこに弱い```")
         
         jkbot = random.choice(("火のねこ", "風のねこ", "水のねこ"))
-        draw = random.choice(("あいこじゃん。つまんねーな","あいここ～。もう終わり？"))
-            filepath = 'https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png'
-            await client.send_file(message.channel,filepath)
-
-        draw2 = random.choice(("あいこじゃん。つまんねーな","お前、やる気あんのか？",
+        draw = random.choice(("https://dl.dropboxusercontent.com/s/i7biv0txjbvl5ou/sinobucard07.png\nあいこじゃん。つまんねーな","あいここ～。もう終わり？\nhttps://dl.dropboxusercontent.com/s/i7biv0txjbvl5ou/sinobucard07.png"))
+        draw2 = random.choice(("あいこじゃん。つまんねーな","お前、やる気あんのか？\nhttps://dl.dropboxusercontent.com/s/i7biv0txjbvl5ou/sinobucard07.png",
                               "はいはい、引き分け","あいこ～。もう終わり？"))
         draw3 = random.choice(("あいこじゃん。つまんねーな","は？これはもう一回だろ。","もう僕の勝ちでいいんじゃね？",
                               "はいはい、引き分け","あいこ～。もう終わり？"))
