@@ -69,36 +69,30 @@ async def on_message(message):
             return (m.author == message.author) and (m.content in ['ぐー', 'ちょき', 'ぱー'])
 
         reply = await bot.wait_for("message", check=jankencheck)
+        if reply.content == "ぐー":
+            if jkbot == "ちょき":
+                judge = wn
+            elif jkbot == "ぐー":
+                judge = draw
+            else:
+                judge = lst
 
-             if reply.content == "ぐー":
-                if jkbot == "ちょき":
-                   judge = wn
-                elif jkbot == "ぱー":
-                   judge = lst2
-                else:
-                   if jkbot == "ぐー":
-                   judge = draw
-          
-             elif reply.content == "ちょき":
-                if jkbot == "ちょき":
-                   judge = draw2
+        elif reply.content == "ちょき":
+            if jkbot == "ぱー":
+                judge = wn2
+            elif jkbot == "ちょき:
+                judge = draw2
+            else:
+                judge = lst2
 
-                elif jkbot ==  jkbot == "ぱー":
-                     judge = wn2
-                else:
-                   if jkbot == "ぐー":
-                   judge = lst2
-                
-             elif jkbot == "ちょき":
-                   judge = wn3
+        else:
+            if jkbot == "ぐー":
+                judge = wn3
+            elif jkbot == "ぱー":
+                judge = draw3
+            else:
+                judge = lst3
 
-                elif jkbot == "ぱー":
-                     judge = lst3
-                else:
-                   if jkbot == "ぐー":
-                   judge = draw3
-                
-             else:
         await message.channel.send(judge)
  
     
