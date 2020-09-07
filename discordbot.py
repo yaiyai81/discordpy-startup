@@ -39,7 +39,34 @@ async def on_message(message):
     if bot.user in message.mentions:
         reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[せつめいしょ]\nおはよう、おやすみ、ななぎして\nじゃんけん→Shinobuの返事→ぐー、ちょき、ぱー```'
         await message.channel.send(reply)
+        
+    if (message.content.match(/^おみくじ/) ||
+      (message.isMemberMentioned(client.user) && message.content.match(/おみくじ/))){
+    let arr = ["大吉", "吉", "凶", "ぽてと", "にゃ～ん", "しゅうまい君"];
+    let weight = [5, 30, 10, 15, 20, 20];
+    lotteryByWeight(message.channel.id, arr, weight);
+  }else if (message.isMemberMentioned(client.user)){
+    sendReply(message, "呼びましたか？");
+  }
+});
 
+function lotteryByWeight(channelId, arr, weight){
+  let totalWeight = 0;
+  for (var i = 0; i < weight.length; i++){
+    totalWeight += weight[i];
+  }
+  let random = Math.floor(Math.random() * totalWeight);
+  for (var i = 0; i < weight.length; i++){
+    if (random < weight[i]){
+      sendMsg(channelId, arr[i]);
+      return;
+    }else{
+      random -= weight[i];
+    }
+  }
+  console.log("lottery error");
+}
+    
 
     if message.content == "じゃんけん":
         await message.channel.send("へーへー。最初はぐー、じゃんけん……")
@@ -94,6 +121,6 @@ async def on_message(message):
                 judge = lst
 
         await message.channel.send(judge)
- 
-    
+        
+
 bot.run(token)
