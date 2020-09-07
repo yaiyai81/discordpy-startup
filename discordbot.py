@@ -93,7 +93,6 @@ async def on_message(message):
 
         await message.channel.send(judge)
  
-async def on_message(message):
     if message.content.startswith("はろー"):
         m = "こんにちは、" + message.author.name + "さん"
         await bot.send_message(message.channel,m)
