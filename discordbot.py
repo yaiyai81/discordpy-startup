@@ -87,10 +87,7 @@ async def on_message(message):
             if jkbot == "火のねこ":
                 judge = wn3
             elif jkbot == "水のねこ":
-                embed=discord.Embed(title="水のネコチャン", description="流るる水のネコチャン。火に強く、風に弱い", color=0x72a8ee)
-embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png")
-await self.bot.say(embed=embed)
-                judge = draw3
+                 judge = draw3
             else:
                 judge = lst
 
