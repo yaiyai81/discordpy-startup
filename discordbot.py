@@ -45,7 +45,7 @@ async def on_message(message):
         
         jkbot = random.choice(("火のねこ", "風のねこ", "水のねこ"))
         draw = random.choice(("あいこじゃん。つまんねーな","あいここ～。もう終わり？"))
-            filepath = 'hinoneko.png'
+            filepath = 'https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png'
             await client.send_file(message.channel,filepath)
 
         draw2 = random.choice(("あいこじゃん。つまんねーな","お前、やる気あんのか？",
