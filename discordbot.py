@@ -40,32 +40,16 @@ async def on_message(message):
         reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[せつめいしょ]\nおはよう、おやすみ、ななぎして\nじゃんけん→Shinobuの返事→ぐー、ちょき、ぱー```'
         await message.channel.send(reply)
         
-    if (message.content.match(/^おみくじ/) ||
-      (message.isMemberMentioned(client.user) && message.content.match(/おみくじ/))){
-    let arr = ["大吉", "吉", "凶", "ぽてと", "にゃ～ん", "しゅうまい君"];
-    let weight = [5, 30, 10, 15, 20, 20];
-    lotteryByWeight(message.channel.id, arr, weight);
-  }else if (message.isMemberMentioned(client.user)){
-    sendReply(message, "呼びましたか？");
-  }
-});
-
-function lotteryByWeight(channelId, arr, weight){
-  let totalWeight = 0;
-  for (var i = 0; i < weight.length; i++){
-    totalWeight += weight[i];
-  }
-  let random = Math.floor(Math.random() * totalWeight);
-  for (var i = 0; i < weight.length; i++){
-    if (random < weight[i]){
-      sendMsg(channelId, arr[i]);
-      return;
-    }else{
-      random -= weight[i];
-    }
-  }
-  console.log("lottery error");
-}
+    if message.content == "ダイス":
+        dice = random.randint(0, 100) #出る目を指定
+        if 0 < dice < 50: #1～49
+        await message.send_message(message.channel, "バカ")
+        elif 51 < dice < 100: #50～99
+        await message.send_message(message.channel, "アホ")
+        elif dice == 0: #0が出たとき
+        await message.send_message(message.channel, "ドジ")
+    else: #それ以外なので今回の場合100が出た時に処理される
+        await message.send_message(message.channel, "マヌケ")
     
 
     if message.content == "じゃんけん":
