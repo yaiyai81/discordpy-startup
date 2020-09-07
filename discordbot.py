@@ -97,15 +97,15 @@ async def on_message(message):
         if client.user != message.author:
             kakuritu = random.randint(1,100)
             if kakuritu>=98 :
-                path=r"C:\Users\abc10\Downloads\tyou"
+                path=r"https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png"
             elif kakuritu>=70 :
-                path=r"C:\Users\abc10\Downloads\daikyoudaikichi"
+                path=r"https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png"
             elif kakuritu>=1 :
-                path=r"C:\Users\abc10\Downloads\kc,ky,tk"
+                path=r"https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png"
 
             dirs = os.listdir( path )
             file = random.choice(dirs)
             image = image = path + "\\" + file
-            await channel.send('Hello', file=discord.File('cool.png', 'testing.png'))
+            await channel.send('Hello', file=discord.File('hinoneko.png', 'kazenoneko.png', 'mizunoneko.png'))
 
 bot.run(token)
