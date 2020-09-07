@@ -45,13 +45,17 @@ async def on_message(message):
         await message.channel.send("へーへー。最初はぐー、じゃんけん……")
         
         jkbot = random.choice(("ぐー", "ちょき", "ぱー"))
-        draw = random.choice(("あいこじゃん。つまんねーな",
-                              "はいはい、引き分け","あいこ～。もう終わり？"))
+        draw = random.choice((":punch:\nあいこじゃん。つまんねーな",
+                              ":punch:\nはいはい、引き分け",":punch:\nあいこ～。もう終わり？"))
+        draw2 = random.choice((":v:\nあいこじゃん。つまんねーな",
+                              ":v:\nはいはい、引き分け",":v:\nあいこ～。もう終わり？"))
+        draw3 = random.choice((":hand_splayed:\nあいこじゃん。つまんねーな",
+                              ":hand_splayed:\nはいはい、引き分け",":hand_splayed:\nあいこ～。もう終わり？"))
         wn = random.choice((":v:\nチッ、お前の勝ちだよ……",
                               ":v:\nくそ、負けた……次は勝つからな！",":v:\n負けた……はぁ？　ふざけんなよ……",":v:\n負けたし……お前……後出ししただろ！"))
         lst = random.choice((":v:\n僕の勝ち！お前弱いな～～！！！",
                               ":v:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":v:\nお前の負け。僕って強いだろ？",":v:\nお前の負け！　雑魚だな～！"))
-        wn2 = random.choice(("::hand_splayed:\nチッ、お前の勝ちだよ……",
+        wn2 = random.choice((":hand_splayed:\nチッ、お前の勝ちだよ……",
                               ":hand_splayed:\nくそ、負けた……次は勝つからな！",":hand_splayed:\n負けた……はぁ？　ふざけんなよ……",":hand_splayed:\n負けたし……お前……後出ししただろ！"))
         lst2 = random.choice((":hand_splayed:\n僕の勝ち！お前弱いな～～！！！",
                               ":hand_splayed:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ","hand_splayed:\nお前の負け。僕って強いだろ？",":hand_splayed:\nお前の負け！　雑魚だな～！"))
@@ -65,20 +69,26 @@ async def on_message(message):
             return (m.author == message.author) and (m.content in ['ぐー', 'ちょき', 'ぱー'])
 
         reply = await bot.wait_for("message", check=jankencheck)
-        if reply.content == jkbot:
-            judge = draw
-        else:
+
             if reply.content == "ぐー":
                 if jkbot == "ちょき":
                     judge = wn
                 else:
-                    judge = lst
-
-            elif reply.content == "ちょき":
-                if jkbot == "ぱー":
-                    judge = wn2
-                else:
+                    if jkbot == "ぱー":
                     judge = lst2
+                    else:
+                        if jkbot == "ぐー":
+                        judge = draw
+                        
+            elif reply.content == "ちょき":
+                if jkbot == "ちょき":
+                    judge = draw2
+                else:
+                    if jkbot == "ぱー":
+                    judge = wn2
+                    else:
+                        if jkbot == "ぐー":
+                        judge = lst2
 
             else:
                 if jkbot == "ぐー":
