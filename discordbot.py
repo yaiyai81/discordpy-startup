@@ -42,12 +42,19 @@ async def on_message(message):
         
     if message.content == "ネコチャンバトル":
         await message.channel.send("へえ。僕に勝負を挑むとは良い度胸だな……お前はどのねこにする？\n```[ネコチャンバトルのルール]\n火のねこ→風のねこに強く、水のねこに弱い\n風のねこ→水のねこに弱く、火のねこに強い\n水のねこ→火の猫に強く、風のねこに弱い```")
+        embed=discord.Embed(title="火のねこ", description="流るる水のネコチャン。風に強く、水に弱い", color=0x72a8ee)
+        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png")
+        await message.channel.send(embed=embed)
+        embed=discord.Embed(title="風のねこ", description="吹きすさぶ風のネコチャン。水に強く、火に弱い", color=0x72a8ee)
+        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png")
+        await message.channel.send(embed=embed)       
+        embed=discord.Embed(title="水のねこ", description="流るる水のネコチャン。火に強く、風に弱い", color=0x72a8ee)
+        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png")
+        await message.channel.send(embed=embed)
+        
         
         jkbot = random.choice(("火のねこ", "風のねこ", "水のねこ"))
         draw = random.choice(("https://dl.dropboxusercontent.com/s/i7biv0txjbvl5ou/sinobucard07.png","あいここ～。もう終わり？\nhttps://dl.dropboxusercontent.com/s/i7biv0txjbvl5ou/sinobucard07.png"))
-        embed=discord.Embed(title="水のネコチャン", description="流るる水のネコチャン。火に強く、風に弱い", color=0x72a8ee)
-        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png")
-        await message.channel.send(embed=embed)
         draw2 = random.choice(("あいこじゃん。つまんねーな","お前、やる気あんのか？\nhttps://dl.dropboxusercontent.com/s/i7biv0txjbvl5ou/sinobucard07.png",
                               "はいはい、引き分け","あいこ～。もう終わり？"))
         draw3 = random.choice(("あいこじゃん。つまんねーな","は？これはもう一回だろ。","もう僕の勝ちでいいんじゃね？",
