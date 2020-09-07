@@ -45,11 +45,11 @@ async def on_message(message):
         await message.channel.send("へーへー。最初はぐー、じゃんけん……")
         
         jkbot = random.choice(("ぐー", "ちょき", "ぱー"))
-        draw = random.choice((":punch:\nあいこじゃん。つまんねーな",
+        draw = random.choice((":punch:\nあいこじゃん。つまんねーな",":punch:\nあいこって一番つまんねーな、僕が勝つまでやるべきだろ。",
                               ":punch:\nはいはい、引き分け",":punch:\nあいこ～。もう終わり？"))
-        draw2 = random.choice((":v:\nあいこじゃん。つまんねーな",
+        draw2 = random.choice((":v:\nあいこじゃん。つまんねーな",":v:\nお前、やる気あんのか？",
                               ":v:\nはいはい、引き分け",":v:\nあいこ～。もう終わり？"))
-        draw3 = random.choice((":hand_splayed:\nあいこじゃん。つまんねーな",
+        draw3 = random.choice((":hand_splayed:\nあいこじゃん。つまんねーな",":hand_splayed:\nは？これはもう一回だろ。",":hand_splayed:\nもう僕の勝ちでいいんじゃね？",
                               ":hand_splayed:\nはいはい、引き分け",":hand_splayed:\nあいこ～。もう終わり？"))
         wn = random.choice((":v:\nは？　ふざけんなもう一回勝負しろ！",":v:\nお前、ずるしただろ！！！！",":v:\nチッ、お前の勝ちだよ……",
                               ":v:\nくそ、負けた……次は勝つからな！",":v:\n負けた……はぁ？　ふざけんなよ……",":v:\n負けたし……お前……後出ししただろ！"))
