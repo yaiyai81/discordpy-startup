@@ -41,6 +41,10 @@ async def on_message(message):
         reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[せつめいしょ]\nおはよう、おやすみ、ななぎして\nネコチャンバトル→火風水の三種のねこを使って勝負。```'
         await message.channel.send(reply)
         
+    if message.content.startswith("ありがとう"):
+        filepath = 'hinoneko.png'
+        await bot.send_file(message.channel,filepath content='火のねこ')
+        
     if message.content == "ネコチャンバトル":
         await message.channel.send("へえ。僕に勝負を挑むとは良い度胸だな……お前はどのねこにする？")
         embed=discord.Embed(title="火のねこ", description="流るる水のネコチャン。風に強く、水に弱い", color=0xff0000)
