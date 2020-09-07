@@ -55,25 +55,25 @@ async def on_message(message):
         await message.channel.send(embed=embed)        
         
         jkbot = random.choice(("火のねこ", "風のねこ", "水のねこ"))
-        draw = random.choice((":hineko:あいこじゃん。つまんねーな",":hineko:あいこって一番つまんねーな、僕が勝つまでやるべきだろ。",
-                              ":hineko:はいはい、引き分け",":hineko:あいこ～。もう終わり？"))
-        draw2 = random.choice((":kazeneko:あいこじゃん。つまんねーな",":kazeneko:お前、やる気あんのか？",
-                              ":kazeneko:はいはい、引き分け",":kazeneko:あいこ～。もう終わり？"))
-        draw3 = random.choice((":mizuneko:あいこじゃん。つまんねーな",":mizuneko:は？これはもう一回だろ。",":mizuneko:もう僕の勝ちでいいんじゃね？",
-                              ":mizuneko:はいはい、引き分け",":mizuneko:あいこ～。もう終わり？"))
-        wn = random.choice((":kazeneko:は？　ふざけんなもう一回勝負しろ！",":kazeneko:お前、ずるしただろ！！！！",":kazeneko:チッ、お前の勝ちだよ……",
-                              ":kazeneko:くそ、負けた……僕のねこが……次は勝つからな！",":kazeneko:負けた……僕のねこが……はぁ？　ふざけんなよ……",":kazeneko:負けたし……お前……イカサマしただろ！"))
-        wn2 = random.choice((":mizuneko:チッ、お前の勝ちだよ……",
-                              ":mizuneko:くそ、負けた……僕のねこが……次は勝つからな！",":mizuneko:負けた……僕のねこが……はぁ？　ふざけんなよ……",":mizuneko:負けたし……お前……イカサマしただろ！"))
-        wn3 = random.choice((":hineko:僕の火のねこが負けるわけないだろ。もう一回勝負しろ",":hineko:は？火のねこが負けるワケないだろ！これで殴れば人は死ぬ",":hineko:お前をなぐっていいか？",":hineko:チッ、お前の勝ちだよ……",
-                              ":hineko:くそ、負けた……僕のねこが……次は勝つからな！",":hineko:負けた……僕のねこが……はぁ？　ふざけんなよ……",":hineko:負けたし……お前……イカサマしただろ！"))
-        lst = random.choice((":kazeneko:僕の勝ち！お前弱いな～～！！！",":kazeneko:うわ、僕って、強すぎ……？",":kazeneko:僕の勝ちだ。いや、イカサマじゃねーから！",
-                              ":kazeneko:僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":kazeneko:お前の負け。僕って強いだろ？",":kazeneko:お前の負け！　雑魚だな～！"))
-        lst2 = random.choice((":mizuneko:僕の勝ち！お前弱いな～～！！！",":mizuneko:ふん、僕が勝つってことは最初から決まってたんだよ！",":mizuneko:お前のねこはまだまだみたいだな！！！！！！僕の勝利！",
-                              ":mizuneko:僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":mizuneko:お前の負け。僕って強いだろ？",":mizuneko:お前の負け！　雑魚だな～！"))
-        lst3 = random.choice((":hineko:僕の勝ち！お前弱いな～～！！！",":hineko:はいはい、僕の勝ち。罰ゲームに一発殴っていい？",":hineko:なんで負けたかって？考えなくてもわかるだろ？僕が強いからだよ！",
-                              ":hineko:僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":hineko:お前の負け。僕って強いだろ？",":hineko:お前の負け！　雑魚だな～！"))
-          
+        draw = random.choice((":hineko: あいこじゃん。つまんねーな",":hineko: あいこって一番つまんねーな、僕が勝つまでやるべきだろ。",
+                              ":hineko: はいはい、引き分け",":hineko: あいこ～。もう終わり？"))
+        draw2 = random.choice((":mizuneko: あいこじゃん。つまんねーな",":mizuneko: お前、やる気あんのか？",
+                              ":mizuneko: はいはい、引き分け",":mizuneko: あいこ～。もう終わり？"))
+        draw3 = random.choice((":mizuneko: あいこじゃん。つまんねーな",":mizuneko: は？これはもう一回だろ。",":mizuneko: もう僕の勝ちでいいんじゃね？",
+                              ":mizuneko: はいはい、引き分け",":mizuneko: あいこ～。もう終わり？"))
+        wn = random.choice((":mizuneko: は？　ふざけんなもう一回勝負しろ！",":mizuneko: お前、ずるしただろ！！！！",":mizuneko: チッ、お前の勝ちだよ……",
+                              ":mizuneko: くそ、負けた……僕のねこが……次は勝つからな！",":mizuneko: 負けた……僕のねこが……はぁ？　ふざけんなよ……",":mizuneko: 負けたし……お前……イカサマしただろ！"))
+        wn2 = random.choice((":mizuneko: チッ、お前の勝ちだよ……",
+                              ":mizuneko: くそ、負けた……僕のねこが……次は勝つからな！",":mizuneko: 負けた……僕のねこが……はぁ？　ふざけんなよ……",":mizuneko: 負けたし……お前……イカサマしただろ！"))
+        wn3 = random.choice((":hineko: 僕の火のねこが負けるわけないだろ。もう一回勝負しろ",":hineko: は？火のねこが負けるワケないだろ！これで殴れば人は死ぬ",":hineko: お前をなぐっていいか？",":hineko: チッ、お前の勝ちだよ……",
+                              ":hineko: くそ、負けた……僕のねこが……次は勝つからな！",":hineko: 負けた……僕のねこが……はぁ？　ふざけんなよ……",":hineko: 負けたし……お前……イカサマしただろ！"))
+        lst = random.choice((":mizuneko: 僕の勝ち！お前弱いな～～！！！",":mizuneko: うわ、僕って、強すぎ……？",":mizuneko: 僕の勝ちだ。いや、イカサマじゃねーから！",
+                              ":mizuneko: 僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":mizuneko: お前の負け。僕って強いだろ？",":mizuneko: お前の負け！　雑魚だな～！"))
+        lst2 = random.choice((":mizuneko: 僕の勝ち！お前弱いな～～！！！",":mizuneko: ふん、僕が勝つってことは最初から決まってたんだよ！",":mizuneko: お前のねこはまだまだみたいだな！！！！！！僕の勝利！",
+                              ":mizuneko: 僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":mizuneko: お前の負け。僕って強いだろ？",":mizuneko: お前の負け！　雑魚だな～！"))
+        lst3 = random.choice((":hineko: 僕の勝ち！お前弱いな～～！！！",":hineko: はいはい、僕の勝ち。罰ゲームに一発殴っていい？",":hineko: なんで負けたかって？考えなくてもわかるだろ？僕が強いからだよ！",
+                              ":hineko: 僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":hineko: お前の負け。僕って強いだろ？",":hineko: お前の負け！　雑魚だな～！"))
+            
 
         def jankencheck(m):
             return (m.author == message.author) and (m.content in ['火のねこ', '風のねこ', '水のねこ'])
