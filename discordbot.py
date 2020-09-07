@@ -44,12 +44,14 @@ async def on_message(message):
         await message.channel.send("へえ。僕に勝負を挑むとは良い度胸だな……お前はどのねこにする？\n```[ネコチャンバトルのルール]\n火のねこ→風のねこに強く、水のねこに弱い\n風のねこ→水のねこに弱く、火のねこに強い\n水のねこ→火の猫に強く、風のねこに弱い```")
         
         jkbot = random.choice(("火のねこ", "風のねこ", "水のねこ"))
-        draw = random.choice(("あいこじゃん。つまんねーなhttps://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png","あいこって一番つまんねーな、僕が勝つまでやるべきだろ。https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png",
-                              "はいはい、引き分けhttps://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png","あいこ～。もう終わり？https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png"))
-        draw2 = random.choice(("https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nあいこじゃん。つまんねーな","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nお前、やる気あんのか？",
-                              "https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nはいはい、引き分け","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nあいこ～。もう終わり？"))
-        draw3 = random.choice(("https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\nあいこじゃん。つまんねーな","https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\nは？これはもう一回だろ。","https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\nもう僕の勝ちでいいんじゃね？",
-                              "https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\nはいはい、引き分け","https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\nあいこ～。もう終わり？"))
+        draw = random.choice(("あいこじゃん。つまんねーな","あいここ～。もう終わり？"))
+            filepath = 'hinoneko.png'
+        await client.send_file(message.channel,filepath)
+
+        draw2 = random.choice(("あいこじゃん。つまんねーな","お前、やる気あんのか？",
+                              "はいはい、引き分け","あいこ～。もう終わり？"))
+        draw3 = random.choice(("あいこじゃん。つまんねーな","は？これはもう一回だろ。","もう僕の勝ちでいいんじゃね？",
+                              "はいはい、引き分け","あいこ～。もう終わり？"))
         wn = random.choice(("https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nは？　ふざけんなもう一回勝負しろ！","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nお前、ずるしただろ！！！！","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nチッ、お前の勝ちだよ……",
                               "https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nくそ、負けた……僕のねこが……次は勝つからな！","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\n負けた……僕のねこが……はぁ？　ふざけんなよ……","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\n負けたし……お前……イカサマしただろ！"))
         wn2 = random.choice(("https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\nチッ、お前の勝ちだよ……",
