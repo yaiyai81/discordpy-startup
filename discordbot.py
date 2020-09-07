@@ -41,11 +41,7 @@ async def on_message(message):
         reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[せつめいしょ]\nおはよう、おやすみ、ななぎして\nネコチャンバトル→火風水の三種のねこを使って勝負。```'
         await message.channel.send(reply)
         
-    if message.content.startswith("あ"):
-        embed=discord.Embed(title="火のねこ", description="流るる水のネコチャン。風に強く、水に弱い", color=0xff0000)
-        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png")
-        await message.channel.send(embed=embed)
-        
+
     if message.content == "ネコチャンバトル":
         await message.channel.send("へえ。僕に勝負を挑むとは良い度胸だな……お前はどのねこにする？")
         embed=discord.Embed(title="火のねこ", description="燃え盛る火のネコチャン。風に強く、水に弱い", color=0xff0000)
@@ -60,9 +56,9 @@ async def on_message(message):
         
         jkbot = random.choice(("火のねこ", "風のねこ", "水のねこ"))
         draw = random.choice(("あいこじゃん。つまんねーな","あいここ～。もう終わり？"))
-          embed=discord.Embed(title="火のねこ", description="流るる水のネコチャン。風に強く、水に弱い", color=0xff0000)
-          embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png")
-          await message.channel.send(embed=embed)
+        embed=discord.Embed(title="火のねこ", description="燃え盛る火のネコチャン。風に強く、水に弱い", color=0xff0000)
+        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png")
+        await message.channel.send(embed=embed)
             
         draw2 = random.choice(("あいこじゃん。つまんねーな","お前、やる気あんのか？",
                               "はいはい、引き分け","あいこ～。もう終わり？"))
