@@ -42,7 +42,7 @@ async def on_message(message):
         await message.channel.send(reply)
         
     if message.content.startswith("ありがとう"):
-        filepath = 'hinoneko.png'
+        filepath = '/hinoneko.png'
         await bot.send_file(message.channel,filepath, content='火のねこ')
         
     if message.content == "ネコチャンバトル":
