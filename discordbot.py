@@ -70,7 +70,8 @@ async def on_message(message):
 
         reply = await bot.wait_for("message", check=jankencheck)
         if reply.content == jkbot:
-
+            judge = draw
+        else:
             if reply.content == "ぐー":
                 if jkbot == "ちょき":
                     judge = wn
