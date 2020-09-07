@@ -41,7 +41,7 @@ async def on_message(message):
         await message.channel.send(reply)
         
     if message.content == "ネコチャンバトル":
-        await message.channel.send("へえ。僕に勝負を挑むとは良い度胸だな……お前はどのねこにする？\n```[ネコチャンバトルのルール]\n炎のねこ→風のねこに強く、水のねこに弱い\n風のねこ→水のねこに弱く、火のねこに強い\n水のねこ→火の猫に強く、のねこに弱い```")
+        await message.channel.send("へえ。僕に勝負を挑むとは良い度胸だな……お前はどのねこにする？\n```[ネコチャンバトルのルール]\n火のねこ→風のねこに強く、水のねこに弱い\n風のねこ→水のねこに弱く、火のねこに強い\n水のねこ→火の猫に強く、のねこに弱い```")
         
         jkbot = random.choice(("火のねこ", "風のねこ", "水のねこ"))
         draw = random.choice(("https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\nあいこじゃん。つまんねーな","https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\nあいこって一番つまんねーな、僕が勝つまでやるべきだろ。",
