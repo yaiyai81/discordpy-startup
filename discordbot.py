@@ -54,45 +54,56 @@ async def on_message(message):
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png")
         await message.channel.send(embed=embed)        
         
-        jkbot = random.choice(("火のねこ", "風のねこ", "水のねこ"))
-        draw = random.choice((":fire::fire::fire::cat::fire::fire::fire:\nあいこじゃん。つまんねーな",":fire::fire::fire::cat::fire::fire::fire:\nあいこって一番つまんねーな、僕が勝つまでやるべきだろ。",":fire::fire::fire::cat::fire::fire::fire:\nはいはい、引き分け",":fire::fire::fire::cat::fire::fire::fire:\nあいこ～。もう終わり？"))
-        draw2 = random.choice((":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado:あいこじゃん。つまんねーな",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado\nお前、やる気あんのか？",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado\nはいはい、引き分け",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado\nあいこ～。もう終わり？"))
-        draw3 = random.choice((":droplet::droplet::droplet::cat::droplet::droplet::droplet:\nあいこじゃん。つまんねーな",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\nは？これはもう一回だろ。",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\nもう僕の勝ちでいいんじゃね？",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\nはいはい、引き分け",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\nあいこ～。もう終わり？"))
-        wn = random.choice((":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado\nは？　ふざけんなもう一回勝負しろ！",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado\nお前、ずるしただろ！！！！",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado\nチッ、お前の勝ちだよ……",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado\nくそ、負けた……僕のねこが……次は勝つからな！",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado\n負けた……僕のねこが……はぁ？　ふざけんなよ……",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado\n負けたし……お前……イカサマしただろ！"))
-        wn2 = random.choice((":droplet::droplet::droplet::cat::droplet::droplet::droplet:\nチッ、お前の勝ちだよ……",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\nくそ、負けた……僕のねこが……次は勝つからな！",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\n負けた……僕のねこが……はぁ？ふざけんなよ……",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\n負けたし……お前……イカサマしただろ！"))
-        wn3 = random.choice((":fire::fire::fire::cat::fire::fire::fire:\n僕の火のねこが負けるわけないだろ。もう一回勝負しろ",":fire::fire::fire::cat::fire::fire::fire:\nは？火のねこが負けるワケないだろ！これで殴れば人は死ぬ",":fire::fire::fire::cat::fire::fire::fire:\nお前をなぐっていいか？",":fire::fire::fire::cat::fire::fire::fire:\nチッ、お前の勝ちだよ……",":fire::fire::fire::cat::fire::fire::fire:\nくそ、負けた……僕のねこが……次は勝つからな！",":fire::fire::fire::cat::fire::fire::fire:\n負けた……僕のねこが……はぁ？　ふざけんなよ……",":fire::fire::fire::cat::fire::fire::fire:\n負けたし……お前……イカサマしただろ！"))
-        lst = random.choice((":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado\n僕の勝ち！お前弱いな～～！！！",:"cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado\nうわ、僕って、強すぎ……？",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado\n僕の勝ちだ。いや、イカサマじゃねーから！",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado\nお前の負け。僕って強いだろ？",":cloud_tornado::cloud_tornado::cloud_tornado::cat:cloud_tornado::cloud_tornado::cloud_tornado\nお前の負け！雑魚だな～！"))
-        lst2 = random.choice((":droplet::droplet::droplet::cat::droplet::droplet::droplet:\n僕の勝ち！お前弱いな～～！！！",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\nふん、僕が勝つってことは最初から決まってたんだよ！",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\nお前のねこはまだまだみたいだな！！！！！！僕の勝利！",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\nお前の負け。僕って強いだろ？",":droplet::droplet::droplet::cat::droplet::droplet::droplet:\nお前の負け！　雑魚だな～！"))
-        lst3 = random.choice((":fire::fire::fire::cat::fire::fire::fire:\n僕の勝ち！お前弱いな～～！！！",":fire::fire::fire::cat::fire::fire::fire:\nはいはい、僕の勝ち。罰ゲームに一発殴っていい？",":fire::fire::fire::cat::fire::fire::fire:\nなんで負けたかって？考えなくてもわかるだろ？僕が強いからだよ！",":fire::fire::fire::cat::fire::fire::fire:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":fire::fire::fire::cat::fire::fire::fire:\nお前の負け。僕って強いだろ？",":fire::fire::fire::cat::fire::fire::fire:\nお前の負け！雑魚だな～！"))
+        jkbot = random.choice(("ぐー", "ちょき", "ぱー"))
+        draw = random.choice((":punch:\nあいこじゃん。つまんねーな",":punch:\nあいこって一番つまんねーな、僕が勝つまでやるべきだろ。",
+                              ":punch:\nはいはい、引き分け",":punch:\nあいこ～。もう終わり？"))
+        draw2 = random.choice((":v:\nあいこじゃん。つまんねーな",":v:\nお前、やる気あんのか？",
+                              ":v:\nはいはい、引き分け",":v:\nあいこ～。もう終わり？"))
+        draw3 = random.choice((":hand_splayed:\nあいこじゃん。つまんねーな",":hand_splayed:\nは？これはもう一回だろ。",":hand_splayed:\nもう僕の勝ちでいいんじゃね？",
+                              ":hand_splayed:\nはいはい、引き分け",":hand_splayed:\nあいこ～。もう終わり？"))
+        wn = random.choice((":v:\nは？　ふざけんなもう一回勝負しろ！",":v:\nお前、ずるしただろ！！！！",":v:\nチッ、お前の勝ちだよ……",
+                              ":v:\nくそ、負けた……次は勝つからな！",":v:\n負けた……はぁ？　ふざけんなよ……",":v:\n負けたし……お前……後出ししただろ！"))
+        wn2 = random.choice((":hand_splayed:\nチッ、お前の勝ちだよ……",
+                              ":hand_splayed:\nくそ、負けた……次は勝つからな！",":hand_splayed:\n負けた……はぁ？　ふざけんなよ……",":hand_splayed:\n負けたし……お前……後出ししただろ！"))
+        wn3 = random.choice((":punch:\n僕のぐーが負けるわけないだろ。もう一回勝負しろ",":punch:\nは？ぐーが負けるワケないだろ！これで殴れば人は死ぬ",":punch:\nお前をこの拳でなぐっていいか？",":punch:\nチッ、お前の勝ちだよ……",
+                              ":punch:\nくそ、負けた……次は勝つからな！",":punch:\n負けた……はぁ？　ふざけんなよ……",":punch:\n負けたし……お前……後出ししただろ！"))
+        lst = random.choice((":v:\n僕の勝ち！お前弱いな～～！！！",":v:\nうわ、僕って、強すぎ……？",":v:\n僕の勝ちだ。いや、後出しじゃねーから！",
+                              ":v:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":v:\nお前の負け。僕って強いだろ？",":v:\nお前の負け！　雑魚だな～！"))
+        lst2 = random.choice((":hand_splayed:\n僕の勝ち！お前弱いな～～！！！",":hand_splayed:\nふん、僕が勝つってことは最初から決まってたんだよ！",":hand_splayed:\nお前の頭がパー！！！！！！僕の勝利！",
+                              ":hand_splayed:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":hand_splayed:\nお前の負け。僕って強いだろ？",":hand_splayed:\nお前の負け！　雑魚だな～！"))
+        lst3 = random.choice((":punch:\n僕の勝ち！お前弱いな～～！！！",":punch:\nはいはい、僕の勝ち。罰ゲームにこれで一発殴っていい？",":punch:\nなんで負けたかって？考えなくてもわかるだろ？僕が強いからだよ！",
+                              ":punch:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":punch:\nお前の負け。僕って強いだろ？",":punch:\nお前の負け！　雑魚だな～！"))
+        
 
         def jankencheck(m):
-            return (m.author == message.author) and (m.content in ['火のねこ', '風のねこ', '水のねこ'])
+            return (m.author == message.author) and (m.content in ['ぐー', 'ちょき', 'ぱー'])
 
         reply = await bot.wait_for("message", check=jankencheck)
-        if reply.content == "火のねこ":
-            if jkbot == "風のねこ":
+        if reply.content == "ぐー":
+            if jkbot == "ちょき":
                 judge = wn
-            elif jkbot == "火のねこ":
+            elif jkbot == "ぐー":
                 judge = draw
             else:
                 judge = lst2
 
-        elif reply.content == "風のねこ":
-            if jkbot == "水のねこ":
+        elif reply.content == "ちょき":
+            if jkbot == "ぱー":
                 judge = wn2
-            elif jkbot == "風のねこ":
+            elif jkbot == "ちょき":
                 judge = draw2
             else:
                 judge = lst3
 
         else:
-            if jkbot == "火のねこ":
+            if jkbot == "ぐー":
                 judge = wn3
-            elif jkbot == "水のねこ":
-                 judge = draw3
+            elif jkbot == "ぱー":
+                judge = draw3
             else:
                 judge = lst
 
         await message.channel.send(judge)
-
+ 
+    
 bot.run(token)
