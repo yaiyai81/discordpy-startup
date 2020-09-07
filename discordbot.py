@@ -44,8 +44,8 @@ async def on_message(message):
         await message.channel.send("へえ。僕に勝負を挑むとは良い度胸だな……お前はどのねこにする？\n```[ネコチャンバトルのルール]\n火のねこ→風のねこに強く、水のねこに弱い\n風のねこ→水のねこに弱く、火のねこに強い\n水のねこ→火の猫に強く、風のねこに弱い```")
         
         jkbot = random.choice(("火のねこ", "風のねこ", "水のねこ"))
-        draw = random.choice(("https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\nあいこじゃん。つまんねーな","https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\nあいこって一番つまんねーな、僕が勝つまでやるべきだろ。",
-                              "https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\nはいはい、引き分け","https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\nあいこ～。もう終わり？"))
+        draw = random.choice(("あいこじゃん。つまんねーなhttps://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png","あいこって一番つまんねーな、僕が勝つまでやるべきだろ。https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png",
+                              "はいはい、引き分けhttps://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png","あいこ～。もう終わり？https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png"))
         draw2 = random.choice(("https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nあいこじゃん。つまんねーな","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nお前、やる気あんのか？",
                               "https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nはいはい、引き分け","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nあいこ～。もう終わり？"))
         draw3 = random.choice(("https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\nあいこじゃん。つまんねーな","https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\nは？これはもう一回だろ。","https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\nもう僕の勝ちでいいんじゃね？",
