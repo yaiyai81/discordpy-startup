@@ -103,6 +103,8 @@ async def on_message(message):
             else:
                 judge = lst
                 
+          await message.channel.send(judge)
+ 
     if (message.content.match(/^！おみくじ/) ||
         (message.isMemberMentioned(bot.user) && message.content.match(/おみくじ/))){
       let arr = ["大吉", "吉", "凶", "ぽてと", "にゃ～ん", "しゅうまい君"];
@@ -111,6 +113,4 @@ async def on_message(message):
     }else if (message.isMemberMentioned(bot.user)){
       sendReply(message, "呼びましたか？");
 
-          await message.channel.send(judge)
- 
 bot.run(token)
