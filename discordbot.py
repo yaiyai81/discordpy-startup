@@ -43,7 +43,7 @@ async def on_message(message):
         
     if message.content.startswith("ありがとう"):
         filepath = 'hinoneko.png'
-        await bot.send_file(message.channel,filepath content='火のねこ')
+        await bot.send_file(message.channel,filepath, content='火のねこ')
         
     if message.content == "ネコチャンバトル":
         await message.channel.send("へえ。僕に勝負を挑むとは良い度胸だな……お前はどのねこにする？")
