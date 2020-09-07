@@ -38,12 +38,22 @@ async def on_message(message):
         await message.channel.send(random.choice(word_list3))
    
     if bot.user in message.mentions:
-        reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[Hello Sinobu bot!]\n挨拶：おはよう、おやすみ\n会話：ななぎして\nゲーム：ネコチャンバトル→火風水の三種のねこを使って勝負。じゃんけん形式。```'
+        reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[Hello Sinobu bot!]\n挨拶：おはよう、おやすみ\n会話：ななぎして、今日更新日、しのなぎ幸せになれると思う？\nゲーム：ネコチャンバトル→火風水の三種のねこを使って勝負。じゃんけん形式。```'
         await message.channel.send(reply)
         
+    if "今日更新日" in message.content:
+        word_list4 = ["https://cdn.discordapp.com/attachments/740524923847573555/752579834013548610/EYbNJduXsAE88WC.png"]
+        await message.channel.send(random.choice(word_list4))
+
+    if "しのなぎ幸せになれると思う？" in message.content:
+        word_list5 = ["https://cdn.discordapp.com/attachments/724950481662902352/749945323769823302/EgfLwdUU0AA8-dK.png",
+                      "https://cdn.discordapp.com/attachments/740524923847573555/752581562788216902/9f08c7fa1fedbf6ba0fa43968f71103c_600.png",
+                      "https://cdn.discordapp.com/attachments/740524923847573555/752583065532104714/20180307170541.png"]
+        await message.channel.send(random.choice(word_list5))
+
 
     if message.content == "ネコチャンバトル":
-        await message.channel.send("へえ。僕にバトルを挑むとは良い度胸だな！\n僕はもう召喚するねこを決めてる……いくぜ、ドローだ！")
+        await message.channel.send("へえ。僕にバトルを挑むとは良い度胸だな！\n僕はもう召喚するねこを決めてる……いくぜ、ドローだ！\n```！ドローするねこを以下の3種から選択```")
         embed=discord.Embed(title=":fire:火のねこ", description="燃え盛る火のネコチャン。風に強く、水に弱い\n:fire::fire::fire::cat::fire::fire::fire:", color=0xff0000)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png")
         await message.channel.send(embed=embed)
