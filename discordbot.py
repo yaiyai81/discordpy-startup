@@ -26,11 +26,11 @@ async def on_message(message):
         return
     
     if "おはよう" in message.content:
-        word_list = ["ん～……？　ねむい……","なに……？まだねてろよ……","うるせーな、起こすな！","https://cdn.discordapp.com/attachments/740524923847573555/751840011577458770/gr120.png","ぐぅ……あと1時間……"]
+        word_list = ["ん～……？　ねむい……","なに……？まだねてろよ……","うるせーな、起こすな！","https://cdn.discordapp.com/attachments/740524923847573555/751840011577458770/gr120.png","ぐぅ……あと1時間……","なんだよ、朝から暇人だな。"]
         await message.channel.send(random.choice(word_list))
 
     if "おやすみ" in message.content:
-        word_list2 = ["なんだよ、はよねろ","あーはいはい。さっさとねろよ……","……僕はまだ寝ないけど？","はいはい、おやすみ……"]
+        word_list2 = ["なんだよ、はよねろ","あーはいはい。さっさとねろよ……","……僕はまだ寝ないけど？","はいはい、おやすみ……","寝るのはやくね？　まあ、いいけど……","寝るまえに勝負しろよ！ネコチャンバトルをよ～"]
         await message.channel.send(random.choice(word_list2))
 
     if "ななぎして" in message.content:
