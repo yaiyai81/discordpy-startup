@@ -92,6 +92,20 @@ async def on_message(message):
                 judge = lst
 
         await message.channel.send(judge)
-        
+ 
+    if message.content.startswith("おみくじ"):
+        if client.user != message.author:
+            kakuritu = random.randint(1,100)
+            if kakuritu>=98 :
+                path=r"C:\Users\abc10\Downloads\tyou"
+            elif kakuritu>=70 :
+                path=r"C:\Users\abc10\Downloads\daikyoudaikichi"
+            elif kakuritu>=1 :
+                path=r"C:\Users\abc10\Downloads\kc,ky,tk"
+
+            dirs = os.listdir( path )
+            file = random.choice(dirs)
+            image = image = path + "\\" + file
+            await channel.send('Hello', file=discord.File('cool.png', 'testing.png'))
 
 bot.run(token)
