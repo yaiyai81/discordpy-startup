@@ -79,9 +79,9 @@ async def on_message(message):
                     else:
                         if jkbot == "ぐー":
                         judge = draw
-            else:           
-                if reply.content == "ちょき":
-                    if jkbot == "ちょき":
+          
+                elif reply.content == "ちょき":
+                     if jkbot == "ちょき":
                         judge = draw2
                     else:
                         if jkbot == "ぱー":
@@ -90,11 +90,11 @@ async def on_message(message):
                             if jkbot == "ぐー":
                             judge = lst2
 
-                else:
-                   if reply.content == "ぐー":
-                        if jkbot == "ちょき":
-                           judge = wn3
-                        else:
+                
+                    elif reply.content == "ぐー":
+                         if jkbot == "ちょき":
+                            judge = wn3
+                         else:
                             if jkbot == "ぱー":
                             judge = lst3
                             else:
