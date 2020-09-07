@@ -42,8 +42,9 @@ async def on_message(message):
         await message.channel.send(reply)
         
     if message.content.startswith("あ"):
-        filepath = 'shinobu_bot/hinoneko.png'
-        await bot.send_file(message.channel,filepath, content='火のねこ')
+        embed=discord.Embed(title="火のねこ", description="流るる水のネコチャン。風に強く、水に弱い", color=0xff0000)
+        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png")
+        await message.channel.send(embed=embed)
         
     if message.content == "ネコチャンバトル":
         await message.channel.send("へえ。僕に勝負を挑むとは良い度胸だな……お前はどのねこにする？")
