@@ -95,7 +95,7 @@ async def on_message(message):
  
     if message.content.startswith("おみくじ"):
         if bot.user != message.author:
-            kakuritu = random.randint(1,100)
+            kakuritu = random.choice(1,100)
             if kakuritu>=98 :
                 path=r"https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png"
             elif kakuritu>=70 :
