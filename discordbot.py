@@ -47,7 +47,7 @@ async def on_message(message):
         draw = random.choice(("https://dl.dropboxusercontent.com/s/i7biv0txjbvl5ou/sinobucard07.png","あいここ～。もう終わり？\nhttps://dl.dropboxusercontent.com/s/i7biv0txjbvl5ou/sinobucard07.png"))
         embed=discord.Embed(title="水のネコチャン", description="流るる水のネコチャン。火に強く、風に弱い", color=0x72a8ee)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png")
-        await self.bot.say(embed=embed)
+        await message.channel.send(embed=embed)
         draw2 = random.choice(("あいこじゃん。つまんねーな","お前、やる気あんのか？\nhttps://dl.dropboxusercontent.com/s/i7biv0txjbvl5ou/sinobucard07.png",
                               "はいはい、引き分け","あいこ～。もう終わり？"))
         draw3 = random.choice(("あいこじゃん。つまんねーな","は？これはもう一回だろ。","もう僕の勝ちでいいんじゃね？",
