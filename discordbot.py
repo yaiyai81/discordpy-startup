@@ -80,7 +80,7 @@ async def on_message(message):
         elif reply.content == "ちょき":
             if jkbot == "ぱー":
                 judge = wn2
-            elif jkbot == "ちょき:
+            elif jkbot == "ちょき":
                 judge = draw2
             else:
                 judge = lst2
