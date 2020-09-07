@@ -96,10 +96,10 @@ async def on_message(message):
 async def on_message(message):
     if message.content.startswith("はろー"):
         m = "こんにちは、" + message.author.name + "さん"
-        await client.send_message(message.channel,m)
+        await bot.send_message(message.channel,m)
 
     if message.content.startswith("ありがとう"):
         filepath = 'https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png'
-        await client.send_file(message.channel,filepath,ネコチャン)
+        await bot.send_file(message.channel,filepath,ネコチャン)
 
 bot.run(token)
