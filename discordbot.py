@@ -104,6 +104,9 @@ async def on_message(message):
                 judge = lst
                 
         await message.channel.send(judge)
- 
+        
+    if ':EmojiName:' in message.content:
+           emoji = get(bot.get_all_emojis(), name='EmojiName')
+           await bot.add_reaction(message, emoji)
 
 bot.run(token)
