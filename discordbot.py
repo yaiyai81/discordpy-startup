@@ -43,37 +43,37 @@ async def on_message(message):
         
 
     if message.content == "ネコチャンバトル":
-        await message.channel.send("へえ。僕に勝負を挑むとは良い度胸だな……お前はどのねこにする？")
-        embed=discord.Embed(title="火のねこ", description="燃え盛る火のネコチャン。風に強く、水に弱い", color=0xff0000)
+        await message.channel.send("へえ。僕にネコチャンバトルを挑むとは良い度胸だな！/n僕はもう召喚するねこを決めたぜ……お前は？")
+        embed=discord.Embed(title="▼火のねこ", description="燃え盛る火のネコチャン。風に強く、水に弱い", color=0xff0000)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png")
         await message.channel.send(embed=embed)
-        embed=discord.Embed(title="風のねこ", description="吹きすさぶ風のネコチャン。水に強く、火に弱い", color=0x00ff11)
+        embed=discord.Embed(title="▼風のねこ", description="吹きすさぶ風のネコチャン。水に強く、火に弱い", color=0x00ff11)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png")
         await message.channel.send(embed=embed)       
-        embed=discord.Embed(title="水のねこ", description="流るる水のネコチャン。火に強く、風に弱い", color=0x72a8ee)
+        embed=discord.Embed(title="▼水のねこ", description="流るる水のネコチャン。火に強く、風に弱い", color=0x72a8ee)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png")
         await message.channel.send(embed=embed)        
         
         jkbot = random.choice(("火のねこ", "風のねこ", "水のねこ"))
-        draw = random.choice(("あいこじゃん。つまんねーな","あいここ～。もう終わり？"))
-                 
-        draw2 = random.choice(("あいこじゃん。つまんねーな","お前、やる気あんのか？",
-                              "はいはい、引き分け","あいこ～。もう終わり？"))
-        draw3 = random.choice(("あいこじゃん。つまんねーな","は？これはもう一回だろ。","もう僕の勝ちでいいんじゃね？",
-                              "はいはい、引き分け","あいこ～。もう終わり？"))
-        wn = random.choice(("https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nは？　ふざけんなもう一回勝負しろ！","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nお前、ずるしただろ！！！！","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nチッ、お前の勝ちだよ……",
-                              "https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nくそ、負けた……僕のねこが……次は勝つからな！","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\n負けた……僕のねこが……はぁ？　ふざけんなよ……","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\n負けたし……お前……イカサマしただろ！"))
-        wn2 = random.choice(("https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\nチッ、お前の勝ちだよ……",
-                              "https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\nくそ、負けた……僕のねこが……次は勝つからな！","https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\n負けた……僕のねこが……はぁ？　ふざけんなよ……","https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\n負けたし……お前……イカサマしただろ！"))
-        wn3 = random.choice(("https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\n僕の火のねこが負けるわけないだろ。もう一回勝負しろ","https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\nは？火のねこが負けるワケないだろ！これで殴れば人は死ぬ","https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\nお前をなぐっていいか？","https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\nチッ、お前の勝ちだよ……",
-                              "https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\nくそ、負けた……僕のねこが……次は勝つからな！","https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\n負けた……僕のねこが……はぁ？　ふざけんなよ……","https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\n負けたし……お前……イカサマしただろ！"))
-        lst = random.choice(("https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\n僕の勝ち！お前弱いな～～！！！","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nうわ、僕って、強すぎ……？","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\n僕の勝ちだ。いや、イカサマじゃねーから！",
-                              "https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nお前の負け。僕って強いだろ？","https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png\nお前の負け！　雑魚だな～！"))
-        lst2 = random.choice(("https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\n僕の勝ち！お前弱いな～～！！！","https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\nふん、僕が勝つってことは最初から決まってたんだよ！","https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\nお前のねこはまだまだみたいだな！！！！！！僕の勝利！",
-                              "https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ","https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\nお前の負け。僕って強いだろ？","https://cdn.discordapp.com/attachments/740524923847573555/752440865070383104/mizunoneko.png\nお前の負け！　雑魚だな～！"))
-        lst3 = random.choice(("https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\n僕の勝ち！お前弱いな～～！！！","https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\nはいはい、僕の勝ち。罰ゲームに一発殴っていい？","https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\nなんで負けたかって？考えなくてもわかるだろ？僕が強いからだよ！",
-                              "https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ","https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\nお前の負け。僕って強いだろ？","https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png\nお前の負け！　雑魚だな～！"))
-        
+        draw = random.choice((":hineko:あいこじゃん。つまんねーな",":hineko:あいこって一番つまんねーな、僕が勝つまでやるべきだろ。",
+                              ":hineko:はいはい、引き分け",":hineko:あいこ～。もう終わり？"))
+        draw2 = random.choice((":kazeneko:あいこじゃん。つまんねーな",":kazeneko:お前、やる気あんのか？",
+                              ":kazeneko:はいはい、引き分け",":kazeneko:あいこ～。もう終わり？"))
+        draw3 = random.choice((":mizuneko:あいこじゃん。つまんねーな",":mizuneko:は？これはもう一回だろ。",":mizuneko:もう僕の勝ちでいいんじゃね？",
+                              ":mizuneko:はいはい、引き分け",":mizuneko:あいこ～。もう終わり？"))
+        wn = random.choice((":kazeneko:は？　ふざけんなもう一回勝負しろ！",":kazeneko:お前、ずるしただろ！！！！",":kazeneko:チッ、お前の勝ちだよ……",
+                              ":kazeneko:くそ、負けた……僕のねこが……次は勝つからな！",":kazeneko:負けた……僕のねこが……はぁ？　ふざけんなよ……",":kazeneko:負けたし……お前……イカサマしただろ！"))
+        wn2 = random.choice((":mizuneko:チッ、お前の勝ちだよ……",
+                              ":mizuneko:くそ、負けた……僕のねこが……次は勝つからな！",":mizuneko:負けた……僕のねこが……はぁ？　ふざけんなよ……",":mizuneko:負けたし……お前……イカサマしただろ！"))
+        wn3 = random.choice((":hineko:僕の火のねこが負けるわけないだろ。もう一回勝負しろ",":hineko:は？火のねこが負けるワケないだろ！これで殴れば人は死ぬ",":hineko:お前をなぐっていいか？",":hineko:チッ、お前の勝ちだよ……",
+                              ":hineko:くそ、負けた……僕のねこが……次は勝つからな！",":hineko:負けた……僕のねこが……はぁ？　ふざけんなよ……",":hineko:負けたし……お前……イカサマしただろ！"))
+        lst = random.choice((":kazeneko:僕の勝ち！お前弱いな～～！！！",":kazeneko:うわ、僕って、強すぎ……？",":kazeneko:僕の勝ちだ。いや、イカサマじゃねーから！",
+                              ":kazeneko:僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":kazeneko:お前の負け。僕って強いだろ？",":kazeneko:お前の負け！　雑魚だな～！"))
+        lst2 = random.choice((":mizuneko:僕の勝ち！お前弱いな～～！！！",":mizuneko:ふん、僕が勝つってことは最初から決まってたんだよ！",":mizuneko:お前のねこはまだまだみたいだな！！！！！！僕の勝利！",
+                              ":mizuneko:僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":mizuneko:お前の負け。僕って強いだろ？",":mizuneko:お前の負け！　雑魚だな～！"))
+        lst3 = random.choice((":hineko:僕の勝ち！お前弱いな～～！！！",":hineko:はいはい、僕の勝ち。罰ゲームに一発殴っていい？",":hineko:なんで負けたかって？考えなくてもわかるだろ？僕が強いからだよ！",
+                              ":hineko:僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":hineko:お前の負け。僕って強いだろ？",":hineko:お前の負け！　雑魚だな～！"))
+          
 
         def jankencheck(m):
             return (m.author == message.author) and (m.content in ['火のねこ', '風のねこ', '水のねこ'])
