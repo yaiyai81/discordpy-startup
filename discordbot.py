@@ -60,7 +60,7 @@ async def on_message(message):
         lst = random.choice((":v:\n僕の勝ち！お前弱いな～～！！！",
                               ":v:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":v:\nお前の負け。僕って強いだろ？",":v:\nお前の負け！　雑魚だな～！"))
         lst2 = random.choice((":hand_splayed:\n僕の勝ち！お前弱いな～～！！！",
-                              ":hand_splayed:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ","hand_splayed:\nお前の負け。僕って強いだろ？",":hand_splayed:\nお前の負け！　雑魚だな～！"))
+                              ":hand_splayed:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":hand_splayed:\nお前の負け。僕って強いだろ？",":hand_splayed:\nお前の負け！　雑魚だな～！"))
         lst3 = random.choice((":punch:\n僕の勝ち！お前弱いな～～！！！",
                               ":punch:\n僕の勝ち～～～～！！！まあ、何度でも勝負してやるよ",":punch:\nお前の負け。僕って強いだろ？",":punch:\nお前の負け！　雑魚だな～！"))
         
