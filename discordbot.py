@@ -105,12 +105,5 @@ async def on_message(message):
                 
           await message.channel.send(judge)
  
-    if (message.content.match(/^！おみくじ/) ||
-        (message.isMemberMentioned(bot.user) && message.content.match(/おみくじ/))){
-      let arr = ["大吉", "吉", "凶", "ぽてと", "にゃ～ん", "しゅうまい君"];
-      let weight = [5, 30, 10, 15, 20, 20];
-      lotteryByWeight(message.channel.id, arr, weight);
-    }else if (message.isMemberMentioned(bot.user)){
-      sendReply(message, "呼びましたか？");
 
 bot.run(token)
