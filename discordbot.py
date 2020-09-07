@@ -56,10 +56,7 @@ async def on_message(message):
         
         jkbot = random.choice(("火のねこ", "風のねこ", "水のねこ"))
         draw = random.choice(("あいこじゃん。つまんねーな","あいここ～。もう終わり？"))
-        embed=discord.Embed(title="火のねこ", description="燃え盛る火のネコチャン。風に強く、水に弱い", color=0xff0000)
-        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png")
-        await message.channel.send(embed=embed)
-            
+                 
         draw2 = random.choice(("あいこじゃん。つまんねーな","お前、やる気あんのか？",
                               "はいはい、引き分け","あいこ～。もう終わり？"))
         draw3 = random.choice(("あいこじゃん。つまんねーな","は？これはもう一回だろ。","もう僕の勝ちでいいんじゃね？",
@@ -105,7 +102,15 @@ async def on_message(message):
                  judge = draw3
             else:
                 judge = lst
+                
+    if (message.content.match(/^！おみくじ/) ||
+        (message.isMemberMentioned(bot.user) && message.content.match(/おみくじ/))){
+      let arr = ["大吉", "吉", "凶", "ぽてと", "にゃ～ん", "しゅうまい君"];
+      let weight = [5, 30, 10, 15, 20, 20];
+      lotteryByWeight(message.channel.id, arr, weight);
+    }else if (message.isMemberMentioned(bot.user)){
+      sendReply(message, "呼びましたか？");
 
-        await message.channel.send(judge)
+          await message.channel.send(judge)
  
 bot.run(token)
