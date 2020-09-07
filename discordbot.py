@@ -40,16 +40,21 @@ async def on_message(message):
         reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[せつめいしょ]\nおはよう、おやすみ、ななぎして\nじゃんけん→Shinobuの返事→ぐー、ちょき、ぱー```'
         await message.channel.send(reply)
         
-    if message.content == "ダイス":
-        dice = random.randint(0, 100) #出る目を指定
-        if 0 < dice < 50: #1～49
-        await message.channel.send("バカ")
-        elif 51 < dice < 100: #50～99
-        await message.channel.send("アホ")
-        elif dice == 0: #0が出たとき
-        await message.channel.send("ドジ")
-    else: #それ以外なので今回の場合100が出た時に処理される
-        await message.channel.send("マヌケ")
+    matchDice = re.search(r'1d100 <= (\d+)', message.content)
+    
+    # 1d100 <= '数字' で1d100の判定が出来る
+    if matchDice:
+        num = randNum()
+        targetNum = matchDice.group(1)
+        resultMessage = '1D100 <= ' + str(targetNum) + '→' + str(num)
+        if num <= int(targetNum):
+            await client.send_message(message.channel, resultMessage + '成功')
+        else:
+            await client.send_message(message.channel, resultMessage + '失敗')
+    # お試し100面ダイス振るだけよう
+    elif message.content == '1d100':
+        num = randNum()
+        await client.send_message(message.channel, str(num) + 'だよ')
     
 
     if message.content == "じゃんけん":
