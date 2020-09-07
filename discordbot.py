@@ -105,8 +105,4 @@ async def on_message(message):
                 
         await message.channel.send(judge)
         
-    if ':hineko:' in message.content:
-           emoji = get(bot.get_all_emojis(), name=':hineko:')
-           await bot.add_reaction(message, emoji)
-
 bot.run(token)
