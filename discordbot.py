@@ -40,18 +40,6 @@ async def on_message(message):
         reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[せつめいしょ]\nおはよう、おやすみ、ななぎして\nじゃんけん→Shinobuの返事→ぐー、ちょき、ぱー```'
         await message.channel.send(reply)
         
-    if message.content == "dice":
-        dice = random.randint(0, 100) #出る目を指定
-        if 0 < dice < 50: #1～49
-        await message.send_message(message.channel, "バカ")
-        elif 51 < dice < 100: #50～99
-        await message.send_message(message.channel, "アホ")
-        elif dice == 0: #0が出たとき
-        await message.send_message(message.channel, "ドジ")
-    else: #それ以外なので今回の場合100が出た時に処理される
-        await message.send_message(message.channel, "マヌケ")
-    
-
     if message.content == "じゃんけん":
         await message.channel.send("へーへー。最初はぐー、じゃんけん……")
         
