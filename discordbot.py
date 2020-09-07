@@ -38,7 +38,7 @@ async def on_message(message):
         await message.channel.send(random.choice(word_list3))
    
     if bot.user in message.mentions:
-        reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[Hello Sinobu bot!]\nおはよう、おやすみ、ななぎして\nネコチャンバトル→火風水の三種のねこを使って勝負。```'
+        reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[Hello Sinobu bot!]\n[挨拶]おはよう、おやすみ\n[Nagiにちょっかい]ななぎして\n[ミニゲーム]ネコチャンバトル→火風水の三種のねこを使って勝負。じゃんけん形式。```'
         await message.channel.send(reply)
         
 
