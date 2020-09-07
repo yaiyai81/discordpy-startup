@@ -72,33 +72,32 @@ async def on_message(message):
 
              if reply.content == "ぐー":
                 if jkbot == "ちょき":
-                    judge = wn
+                   judge = wn
+                elif jkbot == "ぱー":
+                   judge = lst2
                 else:
-                    if jkbot == "ぱー":
-                    judge = lst2
-                    else:
-                        if jkbot == "ぐー":
-                        judge = draw
+                   if jkbot == "ぐー":
+                   judge = draw
           
              elif reply.content == "ちょき":
-                     if jkbot == "ちょき":
-                        judge = draw2
-                    else:
-                        if jkbot == "ぱー":
-                        judge = wn2
-                        else:
-                            if jkbot == "ぐー":
-                            judge = lst2
+                if jkbot == "ちょき":
+                   judge = draw2
+
+                elif jkbot ==  jkbot == "ぱー":
+                     judge = wn2
+                else:
+                   if jkbot == "ぐー":
+                   judge = lst2
                 
              else:
-                 if jkbot == "ちょき":
-                    judge = wn3
-                    else:
-                        if jkbot == "ぱー":
-                        judge = lst3
-                        else:
-                            if jkbot == "ぐー":
-                            judge = draw3
+                if jkbot == "ちょき":
+                   judge = wn3
+
+                elif jkbot == "ぱー":
+                     judge = lst3
+                else:
+                   if jkbot == "ぐー":
+                   judge = draw3
 
         await message.channel.send(judge)
  
