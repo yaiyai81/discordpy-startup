@@ -48,13 +48,13 @@ async def on_message(message):
         targetNum = matchDice.group(1)
         resultMessage = '1D100 <= ' + str(targetNum) + '→' + str(num)
         if num <= int(targetNum):
-            await client.send_message(message.channel, resultMessage + '成功')
+            await bot.send_message(message.channel, resultMessage + '成功')
         else:
-            await client.send_message(message.channel, resultMessage + '失敗')
+            await bot.send_message(message.channel, resultMessage + '失敗')
     # お試し100面ダイス振るだけよう
     elif message.content == '1d100':
         num = randNum()
-        await client.send_message(message.channel, str(num) + 'だよ')
+        await bot.send_message(message.channel, str(num) + 'だよ')
     
 
     if message.content == "じゃんけん":
