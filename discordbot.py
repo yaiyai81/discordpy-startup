@@ -69,7 +69,7 @@ async def on_message(message):
             return (m.author == message.author) and (m.content in ['ぐー', 'ちょき', 'ぱー'])
 
         reply = await bot.wait_for("message", check=jankencheck)
-        if reply.content == jkbot:
+
              if reply.content == "ぐー":
                 if jkbot == "ちょき":
                     judge = wn
