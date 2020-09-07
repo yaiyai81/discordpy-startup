@@ -89,8 +89,7 @@ async def on_message(message):
                    if jkbot == "ぐー":
                    judge = lst2
                 
-             else:
-                if jkbot == "ちょき":
+             elif jkbot == "ちょき":
                    judge = wn3
 
                 elif jkbot == "ぱー":
@@ -98,7 +97,8 @@ async def on_message(message):
                 else:
                    if jkbot == "ぐー":
                    judge = draw3
-
+                
+             else:
         await message.channel.send(judge)
  
     
