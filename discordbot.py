@@ -38,14 +38,14 @@ async def on_message(message):
         await message.channel.send(random.choice(word_list3))
    
     if bot.user in message.mentions:
-        reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```:cat:[Hello Sinobu bot!]\n挨拶：おはよう、おやすみ\n会話：ななぎして、今日更新日、しのなぎ幸せになれると思う？\nゲーム：ネコチャンバトル→火風水の三種のねこを使って勝負。じゃんけん形式。```'
+        reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```:cat:[Hello Shinobu bot!]\n挨拶：おはよう、おやすみ\n会話：ななぎして、今日更新日、しのなぎ幸せになれると思う？\nゲーム：ネコチャンバトル→火風水の三種のねこを使って勝負。じゃんけん形式。```'
         await message.channel.send(reply)
         
     if "今日更新日" in message.content:
         word_list4 = ["https://cdn.discordapp.com/attachments/740524923847573555/752579834013548610/EYbNJduXsAE88WC.png"]
         await message.channel.send(random.choice(word_list4))
 
-    if "しのなぎ幸せになれると思う？" in message.content:
+    if "しのなぎ幸せに" in message.content:
         word_list5 = ["https://cdn.discordapp.com/attachments/724950481662902352/749945323769823302/EgfLwdUU0AA8-dK.png",
                       "https://cdn.discordapp.com/attachments/740524923847573555/752581562788216902/9f08c7fa1fedbf6ba0fa43968f71103c_600.png",
                       "https://cdn.discordapp.com/attachments/740524923847573555/752583065532104714/20180307170541.png"]
