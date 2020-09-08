@@ -54,10 +54,10 @@ async def on_message(message):
 
     if message.content == "ネコチャンバトル":
         await message.channel.send("へえ。僕にバトルを挑むとは良い度胸だな！\n僕はもう召喚するねこを決めてる……いくぜ、ドローだ！\n```！ドローするねこを以下の3種から選択```")
-        embed=discord.Embed(title=":fire:火のねこ", description="燃え盛る火のネコチャン。風に強く、水に弱い\n:fire::fire::fire::cat::fire::fire::fire:", color=0xff0000)
+        embed=discord.Embed(title=":fire:火のねこ", description="燃える熱いネコチャン。風に強く、水に弱い\n:fire::fire::fire::cat::fire::fire::fire:", color=0xff0000)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752435155888636015/hinoneko.png")
         await message.channel.send(embed=embed)
-        embed=discord.Embed(title=":cloud_tornado:風のねこ", description="吹きすさぶ風のネコチャン。水に強く、火に弱い\n:cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado:", color=0x00ff11)
+        embed=discord.Embed(title=":cloud_tornado:風のねこ", description="吹き荒ぶ風のネコチャン。水に強く、火に弱い\n:cloud_tornado::cloud_tornado::cloud_tornado::cat::cloud_tornado::cloud_tornado::cloud_tornado:", color=0x00ff11)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/740524923847573555/752440859152351292/kazenoneko.png")
         await message.channel.send(embed=embed)       
         embed=discord.Embed(title=":droplet:水のねこ", description="流るる水のネコチャン。火に強く、風に弱い\n:droplet::droplet::droplet::cat::droplet::droplet::droplet:", color=0x72a8ee)
