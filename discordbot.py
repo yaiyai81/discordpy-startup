@@ -38,7 +38,7 @@ async def on_message(message):
         await message.channel.send(random.choice(word_list3))
    
     if bot.user in message.mentions:
-        reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```:cat:[Hello Shinobu bot!]\n挨拶：おはよう、おやすみ\n会話：ななぎして、今日更新日、しのなぎ幸せになれると思う？\nゲーム：ネコチャンバトル→火風水の三種のねこを使って勝負。じゃんけん形式。```'
+        reply = f'{message.author.mention} ……なんか用？　大した事やんねえからな。\n```[Hello Shinobu bot!]\n挨拶：おはよう、おやすみ\n会話：ななぎして、今日更新日、しのなぎ幸せになれると思う？\nゲーム：ネコチャンバトル→火風水の三種のねこを使って勝負。じゃんけん形式。```'
         await message.channel.send(reply)
         
     if "今日更新日" in message.content:
